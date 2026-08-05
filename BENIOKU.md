@@ -11,8 +11,12 @@ Statik site + Supabase (PostgreSQL, Auth, Storage). Backend sunucusu gerekmez;
 
 ## 1. Klasör yapısı
 
+> **Not:** Site dosyaları GitHub Pages için proje köküne taşındı.
+> Aşağıdaki şemada `public/` yazan yerleri kök dizin olarak okuyun
+> (`public/index.html` → `index.html`).
+
 ```
-public/                          ← Yayına alınacak tek klasör
+(kök)                            ← GitHub Pages buradan yayınlar
 ├── index.html                   Ana sayfa
 ├── hakkimizda.html              Hakkımızda
 ├── menu.html                    Menü (Supabase'den dinamik)
@@ -283,14 +287,42 @@ için böyle. Desteklenenler: YouTube, Instagram, Vimeo ve mp4/webm/mov dosyalar
 
 ## 7. Yayına alma
 
-`public/` klasörünün içeriğini hosting'e yükleyin.
+Site **GitHub Pages** üzerinden yayınlanıyor.
 
-| Ortam | Nasıl |
-|---|---|
-| Netlify / Vercel / Cloudflare Pages | Klasörü sürükleyip bırakın |
-| cPanel / FTP | `public_html` içine kopyalayın |
+**Depo:** https://github.com/tayyipefe/cafe-menu
+**Adres:** https://tayyipefe.github.io/cafe-menu/
 
-Supabase → Authentication → URL Configuration → **Site URL** ve
-**Redirect URLs** alanlarına yayın adresinizi ekleyin.
-`/admin/login` temiz adresi Netlify/Vercel/Cloudflare'de otomatik çalışır;
-Apache/cPanel'de çalışmazsa `/admin/login.html` kullanın.
+### GitHub Pages'i açma (tek seferlik)
+
+1. GitHub'da depoya girin → üstten **Settings**
+2. Sol menüden **Pages**
+3. **Source** → `Deploy from a branch`
+4. **Branch** → `main`, klasör `/ (root)` → **Save**
+5. 1–2 dakika bekleyin, sayfayı yenileyin — adres yukarıda görünür
+
+> Ücretsiz hesapta GitHub Pages için depo **Public** olmalıdır.
+> Settings → General → en altta "Change repository visibility".
+
+### Değişiklik yayınlama
+
+Bilgisayarda bir şey değiştirdikten sonra:
+
+```bash
+git add -A
+git commit -m "degisiklik aciklamasi"
+git push
+```
+
+Push'tan 1–2 dakika sonra site güncellenir.
+
+### Alt dizin uyarısı
+
+GitHub Pages siteyi `/cafe-menu/` alt dizininde yayınlar. Veritabanındaki
+görsel yolları (`/assets/...`) bu yüzden sayfaya göre göreli hâle getirilir —
+`site.js` içindeki `varlikYolu()` bunu yapar. Kendi alan adınızı alıp siteyi
+kök dizine taşırsanız bile çalışmaya devam eder, dokunmanız gerekmez.
+
+### Supabase ayarı
+
+Authentication → URL Configuration → **Site URL** alanına
+`https://tayyipefe.github.io/cafe-menu` yazın.
