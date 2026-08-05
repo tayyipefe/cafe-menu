@@ -1,0 +1,59 @@
+# ============================================================================
+#  La'mondes Cafe & Bakery — Netlify yapılandırması
+#
+#  Site dosyaları proje kökündedir; derleme adımı yoktur (statik site).
+#  GitHub deposu Netlify'a bağlandığında her push sonrası otomatik yayınlanır.
+# ============================================================================
+
+[build]
+  publish = "."
+  command = ""
+
+# ----------------------------------------------------------------------------
+# Yayına girmemesi gereken klasörler
+# İçlerinde gizli bilgi yok ama sitenin parçası da değiller; kapalı tutuyoruz.
+# ----------------------------------------------------------------------------
+[[redirects]]
+  from = "/supabase/*"
+  to = "/index.html"
+  status = 404
+
+[[redirects]]
+  from = "/arsiv-eski-site/*"
+  to = "/index.html"
+  status = 404
+
+# ----------------------------------------------------------------------------
+# Güvenlik başlıkları
+# ----------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Yönetim paneli arama motorlarına kapalı
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# ----------------------------------------------------------------------------
+# Önbellek — görseller ve videolar uzun süre saklansın, HTML her zaman taze
+# ----------------------------------------------------------------------------
+[[headers]]
+  for = "/assets/gorseller/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

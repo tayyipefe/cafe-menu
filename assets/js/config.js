@@ -20,10 +20,11 @@ window.LM_CONFIG = {
      Alan adınızı aldığınızda SADECE aşağıdaki satırı değiştirin;
      QR kodları kendiliğinden güncellenir, yeniden üretmeye gerek yoktur.
 
-     Şu an GitHub Pages adresi kullanılıyor. Kendi alan adınızı alırsanız
-     (örn. https://lamondescafe.com) sadece bu satırı değiştirin.
+     ⚠ Netlify'da site adını farklı seçtiyseniz (örn. lamondes.netlify.app)
+     bu satırı ona göre düzeltin — QR kodları buradan üretiliyor.
+     İleride kendi alan adınızı alırsanız yine sadece burayı değiştirin.
      -------------------------------------------------------------------------- */
-  SITE_ADRESI: "https://tayyipefe.github.io/cafe-menu",
+  SITE_ADRESI: "https://lamondescafe.netlify.app",
 
   ISLETME: {
     ad: "La'mondes",
