@@ -14,7 +14,11 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const PORT = process.env.PORT || 4000;
-const KOK = path.join(__dirname, "public");
+
+/* Site dosyaları proje kökündedir (GitHub Pages bu yapıyı bekliyor).
+   Yayına girmeyen klasörler aşağıda engellenir. */
+const KOK = __dirname;
+const GIZLI = [".git", "supabase", "arsiv-eski-site", ".claude", "node_modules"];
 
 const TIPLER = {
   ".html": "text/html; charset=utf-8",
@@ -59,6 +63,12 @@ const sunucu = http.createServer((istek, yanit) => {
   // Dizin dışına çıkmayı engelle
   const hedef = path.join(KOK, path.normalize(yol));
   if (!hedef.startsWith(KOK)) return govdeGonder(yanit, 403, "Erişim reddedildi");
+
+  // Yayına girmeyen klasörleri gizle
+  const ilkParca = yol.split("/").filter(Boolean)[0];
+  if (ilkParca && GIZLI.includes(ilkParca)) {
+    return govdeGonder(yanit, 404, "Bulunamadı");
+  }
 
   const adaylar = [hedef];
   // Uzantısız temiz adresler: /admin/login -> /admin/login.html

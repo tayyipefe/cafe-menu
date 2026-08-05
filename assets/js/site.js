@@ -41,10 +41,24 @@
 
   function yaz(el, html) { if (el) el.innerHTML = html; }
 
+  /* Veritabanındaki "/assets/..." yolları alan adının KÖKÜNE göre çözülür.
+     Site bir alt dizinde yayınlanırsa (örn. GitHub Pages → /cafe-menu/)
+     bu yollar 404 verir. Burada sayfaya göre göreli hâle getiriyoruz:
+       /assets/x.jpg  →  assets/x.jpg      (kök sayfalar)
+       /assets/x.jpg  →  ../assets/x.jpg   (yasal/ altındaki sayfalar)
+     Tam adresler (https://…) ve data: URI'ları olduğu gibi kalır. */
+  function varlikYolu(u) {
+    if (!u) return u;
+    if (/^(https?:)?\/\//i.test(u) || u.indexOf("data:") === 0) return u;
+    if (u.charAt(0) === "/") return KOK + u.slice(1);
+    return u;
+  }
+
   /* Küçük önizlemeler için daha hafif bir görsel adresi üretir.
      Unsplash bağlantılarında genişlik/kalite parametresini düşürür;
-     kendi yüklediğiniz görsellerde adres değişmeden döner. */
+     kendi yüklediğiniz görsellerde yalnızca yol düzeltmesi uygulanır. */
   function kucukGorsel(url, genislik) {
+    url = varlikYolu(url);
     if (!url || url.indexOf("images.unsplash.com") === -1) return url;
     return url
       .replace(/([?&])w=\d+/, "$1w=" + genislik)
@@ -703,7 +717,7 @@
       if (i >= liste.length) i = 0;
       simdi = i;
       var g = liste[i];
-      img.src = g.gorsel_url;
+      img.src = varlikYolu(g.gorsel_url);
       img.alt = g.baslik || "Galeri görseli";
       yazi.textContent = [g.baslik, g.aciklama].filter(Boolean).join(" — ");
       sayac.textContent = i + 1 + " / " + liste.length;
@@ -809,7 +823,7 @@
        kabul edilir. Yerel yollar da desteklenmezse panelden yüklenen ve projeye
        konan videolar hiç görünmez. */
     if (/\.(mp4|webm|mov|m4v)(\?|#|$)/i.test(m) && /^(https?:\/\/|\/)/i.test(m)) {
-      return { tip: "dosya", src: m };
+      return { tip: "dosya", src: varlikYolu(m) };
     }
     if (/^https?:\/\//i.test(m)) return { tip: "baglanti", src: m };
     return null;
@@ -892,7 +906,7 @@
     kutu.innerHTML =
       '<article class="etkinlik">' +
       (e.afis_url
-        ? '<img class="etkinlik-afis" src="' + kacis(e.afis_url) + '" alt="' +
+        ? '<img class="etkinlik-afis" src="' + kacis(varlikYolu(e.afis_url)) + '" alt="' +
           kacis(e.film_adi || e.baslik) + ' afişi">'
         : '<div class="etkinlik-afis" style="display:grid;place-items:center;font-size:3rem">🎬</div>') +
       '<div class="etkinlik-govde">' +
@@ -940,9 +954,9 @@
 
       /* Video varsa afiş onun kapak görseli olur; yoksa afiş tek başına gösterilir. */
       var medya = video
-        ? videoHtml(video, e.film_adi || e.baslik, e.afis_url)
+        ? videoHtml(video, e.film_adi || e.baslik, varlikYolu(e.afis_url))
         : e.afis_url
-          ? '<div class="video-kutu"><img src="' + kacis(e.afis_url) + '" alt="' +
+          ? '<div class="video-kutu"><img src="' + kacis(varlikYolu(e.afis_url)) + '" alt="' +
             kacis(e.film_adi || e.baslik) + ' afişi" loading="lazy"></div>'
           : '<div class="video-kutu video-yok">🎬</div>';
 

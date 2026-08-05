@@ -20,9 +20,10 @@ window.LM_CONFIG = {
      Alan adınızı aldığınızda SADECE aşağıdaki satırı değiştirin;
      QR kodları kendiliğinden güncellenir, yeniden üretmeye gerek yoktur.
 
-     ⚠ Şu anki değer YER TUTUCUDUR. Alan adı alınmadan QR kodlarını BASMAYIN.
+     Şu an GitHub Pages adresi kullanılıyor. Kendi alan adınızı alırsanız
+     (örn. https://lamondescafe.com) sadece bu satırı değiştirin.
      -------------------------------------------------------------------------- */
-  SITE_ADRESI: "https://lamondescafe.com",
+  SITE_ADRESI: "https://tayyipefe.github.io/cafe-menu",
 
   ISLETME: {
     ad: "La'mondes",

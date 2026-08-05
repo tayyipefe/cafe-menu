@@ -1,0 +1,21 @@
+# Bağımlılıklar
+node_modules/
+
+# Ortam dosyaları — gizli anahtarlar buraya girer, ASLA yayınlanmasın
+.env
+.env.*
+
+# İşletim sistemi
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editör
+.vscode/
+.idea/
+
+# Geçici / arşiv
+*.rar
+*.zip
+*.log
+*.tmp
