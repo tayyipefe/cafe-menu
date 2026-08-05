@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İletişim — La'mondes Cafe &amp; Bakery</title>
+<meta name="description" content="La'mondes Cafe & Bakery iletişim bilgileri, konum haritası ve mesaj formu. Mimar Sinan Mah. Ayık Sk. No:18, Körfez / Kocaeli. Her gün 11:00 – 00:00.">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-sayfa="iletisim" data-kok="">
+
+<header id="ustBar"></header>
+
+<main>
+
+  <section class="sayfa-bas">
+    <div class="kap">
+      <span class="ust-etiket">Bize Ulaşın</span>
+      <h1>İletişim</h1>
+      <p>
+        Masa ayırtmak, özel gün siparişi vermek veya sadece merhaba demek için
+        yazın. En hızlı dönüş telefon ve Instagram üzerinden olur.
+      </p>
+      <div class="iz"><a href="index.html">Ana Sayfa</a><span>/</span>İletişim</div>
+    </div>
+  </section>
+
+  <section class="blok">
+    <div class="kap">
+      <div class="iletisim-duzen">
+
+        <!-- Sol: harita ve bilgiler -->
+        <div>
+          <div class="harita">
+            <iframe id="haritaCerceve" title="La'mondes Cafe &amp; Bakery konumu"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+
+            <div class="bilgi-liste">
+              <div class="bilgi">
+                <span class="im">📍</span>
+                <div>
+                  <b>Adres</b>
+                  <p>Mimar Sinan Mah., Ayık Sk. No:18<br>41780 Körfez / Kocaeli</p>
+                  <a id="yolTarifi" href="https://www.google.com/maps" target="_blank" rel="noopener">Yol tarifi al →</a>
+                </div>
+              </div>
+
+              <div class="bilgi">
+                <span class="im">📞</span>
+                <div>
+                  <b>Telefon</b>
+                  <p><a href="tel:+905424062095">+90 542 406 20 95</a></p>
+                  <p><a href="https://wa.me/905424062095" target="_blank" rel="noopener">WhatsApp ile yazın</a></p>
+                </div>
+              </div>
+
+              <div class="bilgi">
+                <span class="im">📷</span>
+                <div>
+                  <b>Instagram</b>
+                  <p>
+                    <a href="https://www.instagram.com/lamondescafe?igsh=NDM4OGh6NTMzN2Rv"
+                       target="_blank" rel="noopener">@lamondescafe</a>
+                  </p>
+                  <p>Güncel lezzetler ve duyurular için en hızlı kanalımız.</p>
+                </div>
+              </div>
+
+              <div class="bilgi">
+                <span class="im">✉️</span>
+                <div>
+                  <b>E-posta</b>
+                  <p><a href="mailto:coskunmmustafa@gmail.com">coskunmmustafa@gmail.com</a></p>
+                </div>
+              </div>
+
+              <div class="bilgi">
+                <span class="im">🕘</span>
+                <div>
+                  <b>Çalışma Saatleri</b>
+                  <table class="saat-tablo"><tbody id="saatler"></tbody></table>
+                </div>
+              </div>
+
+              <div class="bilgi">
+                <span class="im">⭐</span>
+                <div>
+                  <b>Google'da bizi değerlendirin</b>
+                  <p>Yeni bir işletmeyiz, her yorum bize yarıyor.</p>
+                  <p>
+                    <a id="yorumYaz" href="https://www.google.com/maps" target="_blank" rel="noopener">Yorum yaz →</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sağ: form -->
+        <div>
+          <div class="form-kart">
+            <span class="ust-etiket">Mesaj Gönderin</span>
+            <h2 style="margin-bottom:.3rem">Size nasıl yardımcı olabiliriz?</h2>
+            <p style="color:var(--muted);font-size:.94rem;margin-bottom:1.5rem">
+              Rezervasyon, özel gün siparişi, geri bildirim veya iş birliği.
+            </p>
+
+            <div id="formUyari"></div>
+
+            <form id="iletisimForm" novalidate>
+              <div class="form-izgara">
+
+                <div class="alan alan-tam">
+                  <label for="fAd">Ad Soyad <span class="zorunlu">*</span></label>
+                  <input type="text" id="fAd" name="ad" placeholder="Adınız ve soyadınız" required autocomplete="name">
+                  <span class="alan-hata"></span>
+                </div>
+
+                <div class="alan">
+                  <label for="fEposta">E-posta <span class="zorunlu">*</span></label>
+                  <input type="email" id="fEposta" name="eposta" placeholder="ornek@eposta.com" required autocomplete="email">
+                  <span class="alan-hata"></span>
+                </div>
+
+                <div class="alan">
+                  <label for="fTelefon">Telefon</label>
+                  <input type="tel" id="fTelefon" name="telefon" placeholder="0532 123 45 67" autocomplete="tel">
+                  <span class="alan-hata"></span>
+                </div>
+
+                <div class="alan">
+                  <label for="fKonu">Konu <span class="zorunlu">*</span></label>
+                  <select id="fKonu" name="konu" required>
+                    <option value="">Seçiniz…</option>
+                    <option>Masa Rezervasyonu</option>
+                    <option>Doğum Günü / Özel Gün</option>
+                    <option>Toplu Sipariş</option>
+                    <option>Etkinlik Katılımı</option>
+                    <option>Görüş ve Öneri</option>
+                    <option>İş Birliği</option>
+                  </select>
+                  <span class="alan-hata"></span>
+                </div>
+
+                <div class="alan">
+                  <label for="fKisi">Kişi Sayısı</label>
+                  <select id="fKisi" name="kisi">
+                    <option value="">Rezervasyon değilse boş bırakın</option>
+                    <option>1 – 2 kişi</option>
+                    <option>3 – 4 kişi</option>
+                    <option>5 – 8 kişi</option>
+                    <option>9 kişi ve üzeri</option>
+                  </select>
+                  <span class="alan-hata"></span>
+                </div>
+
+                <div class="alan">
+                  <label for="fTarih">Tarih</label>
+                  <input type="date" id="fTarih" name="tarih">
+                  <span class="alan-hata"></span>
+                </div>
+
+                <div class="alan">
+                  <label for="fSaat">Saat</label>
+                  <input type="time" id="fSaat" name="saat">
+                  <span class="alan-hata"></span>
+                </div>
+
+                <div class="alan alan-tam">
+                  <label for="fMesaj">Mesajınız <span class="zorunlu">*</span></label>
+                  <textarea id="fMesaj" name="mesaj" required
+                    placeholder="Bize iletmek istediklerinizi yazın."></textarea>
+                  <span class="alan-hata"></span>
+                </div>
+
+                <div class="alan alan-onay alan-tam">
+                  <input type="checkbox" id="fOnay" name="onay" required>
+                  <label for="fOnay">
+                    <a href="yasal/kvkk-aydinlatma-metni.html">KVKK Aydınlatma Metni</a> ve
+                    <a href="yasal/gizlilik-politikasi.html">Gizlilik Politikası</a> hakkında
+                    bilgilendirildim; talebimle ilgili benimle iletişime geçilmesini onaylıyorum.
+                    <span class="zorunlu">*</span>
+                  </label>
+                </div>
+
+                <div class="alan alan-tam">
+                  <button class="btn btn-ana btn-tam" type="submit">Mesajı Gönder</button>
+                </div>
+
+              </div>
+            </form>
+
+            <div class="form-basari" id="formBasari" aria-live="polite">
+              <div class="im">✓</div>
+              <h3>Mesajınız İletildi!</h3>
+              <p>
+                Teşekkürler <strong data-doldur="ad">dostum</strong>. Mesajınız bize ulaştı,
+                <strong data-doldur="eposta">e-posta adresiniz</strong> üzerinden en kısa
+                sürede dönüş yapacağız.
+              </p>
+              <div class="btn-sira" style="justify-content:center">
+                <a class="btn btn-ana" href="menu.html">Menüye Göz At</a>
+                <button class="btn btn-cizgi" type="button" data-yeni-mesaj>Yeni Mesaj Yaz</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="altBilgi"></footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/supa.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

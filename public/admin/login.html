@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yönetim Girişi — La'mondes</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+
+<main class="giris-sayfa">
+  <div class="giris-kart">
+
+    <a class="marka" href="../index.html">
+      <span class="marka-im">L</span>
+      <span><span class="marka-ad">La'mondes</span><span class="marka-alt">Cafe &amp; Bakery</span></span>
+    </a>
+
+    <h1>Yönetim Paneli</h1>
+    <p class="alt-yazi">Devam etmek için giriş yapın.</p>
+
+    <div id="uyari"></div>
+
+    <form id="girisForm" novalidate>
+      <div class="form-izgara">
+
+        <div class="alan">
+          <label for="gEposta">E-posta</label>
+          <input type="email" id="gEposta" name="eposta" autocomplete="username"
+                 placeholder="yonetici@lamondes.com" required autofocus>
+          <span class="alan-hata"></span>
+        </div>
+
+        <div class="alan">
+          <label for="gSifre">Şifre</label>
+          <input type="password" id="gSifre" name="sifre" autocomplete="current-password"
+                 placeholder="••••••••" required>
+          <span class="alan-hata"></span>
+        </div>
+
+        <button class="btn btn-ana btn-tam" type="submit" id="girisBtn">Giriş Yap</button>
+
+      </div>
+    </form>
+
+    <p class="giris-dip">
+      <a href="../index.html">← Siteye dön</a>
+    </p>
+  </div>
+</main>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/supa.js"></script>
+<script>
+(function () {
+  "use strict";
+  var form = document.getElementById("girisForm");
+  var btn = document.getElementById("girisBtn");
+  var uyari = document.getElementById("uyari");
+  var eposta = document.getElementById("gEposta");
+  var sifre = document.getElementById("gSifre");
+
+  function uyar(mesaj, tip) {
+    uyari.className = "uyari " + (tip === "bilgi" ? "uyari-bilgi" : "uyari-hata");
+    uyari.textContent = mesaj;
+  }
+
+  function temizle() { uyari.className = ""; uyari.textContent = ""; }
+
+  function alanHata(input, mesaj) {
+    var s = input.closest(".alan");
+    s.classList.toggle("hatali", !!mesaj);
+    s.querySelector(".alan-hata").textContent = mesaj || "";
+  }
+
+  // Oturumu açık olan doğrudan panele gitsin
+  if (LM.auth.oturum()) {
+    LM.auth.yoneticiMi().then(function (s) {
+      if (s) window.location.replace("index.html");
+    });
+  }
+
+  // "Yetkiniz yok / oturum bitti" ile yönlendirildiyse bilgi ver
+  if (/[?&]geri=1/.test(location.search)) {
+    uyar("Oturumunuz sona ermiş veya bu hesap yönetici olarak tanımlı değil. Lütfen tekrar giriş yapın.", "bilgi");
+  }
+
+  [eposta, sifre].forEach(function (i) {
+    i.addEventListener("input", function () { alanHata(i, ""); temizle(); });
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    temizle();
+
+    var ok = true;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(eposta.value.trim())) {
+      alanHata(eposta, "Geçerli bir e-posta adresi girin."); ok = false;
+    } else alanHata(eposta, "");
+
+    if (!sifre.value) { alanHata(sifre, "Şifrenizi girin."); ok = false; }
+    else alanHata(sifre, "");
+
+    if (!ok) return;
+
+    btn.disabled = true;
+    btn.textContent = "Giriş yapılıyor…";
+
+    LM.auth.girisYap(eposta.value.trim(), sifre.value)
+      .then(function () { return LM.auth.yoneticiMi(); })
+      .then(function (s) {
+        if (!s) {
+          return LM.auth.cikisYap().then(function () {
+            throw new Error(
+              "Bu hesap yönetici olarak tanımlı değil. Supabase'de lm_adminler tablosuna eklenmesi gerekiyor."
+            );
+          });
+        }
+        window.location.replace("index.html");
+      })
+      .catch(function (err) {
+        uyar(err.message || "Giriş yapılamadı.");
+        btn.disabled = false;
+        btn.textContent = "Giriş Yap";
+        sifre.value = "";
+        sifre.focus();
+      });
+  });
+})();
+</script>
+</body>
+</html>

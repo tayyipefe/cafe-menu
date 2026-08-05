@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menü — La'mondes Cafe &amp; Bakery</title>
+  <meta name="description" content="La'mondes Cafe & Bakery menüsü: espresso bazlı kahveler, filtre kahve, Belçika waffle çeşitleri, soğuk içecekler ve günlük fırın ürünleri. Kategorilere göre filtreleyin." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Ana menü">
+        <a href="index.html" class="brand" aria-label="La'mondes Cafe and Bakery ana sayfa">
+          <span class="brand__mark">L</span>
+          <span class="brand__text">
+            <span class="brand__name">La'mondes</span>
+            <span class="brand__sub">Cafe &amp; Bakery</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" id="navToggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__menu" id="navMenu">
+          <li><a class="nav__link" href="index.html">Ana Sayfa</a></li>
+          <li><a class="nav__link" href="menu.html">Menü</a></li>
+          <li><a class="nav__link" href="quiz.html">Quiz Night</a></li>
+          <li><a class="nav__link" href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a class="nav__link" href="galeri.html">Galeri</a></li>
+          <li><a class="nav__link" href="iletisim.html">İletişim</a></li>
+          <li><a class="btn btn--primary nav__cta" href="iletisim.html">Rezervasyon Yap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= SAYFA BAŞLIĞI ================= -->
+    <section class="page-hero hero--menu">
+      <div class="container">
+        <span class="eyebrow">Fiyat Listesi</span>
+        <h1>Menümüz</h1>
+        <p>
+          Kendi kavurduğumuz çekirdekler, 24 saat dinlendirilmiş waffle hamuru ve
+          her sabah taze fırınlanan tatlılar. Aşağıdaki butonlarla kategori seçebilirsiniz.
+        </p>
+        <div class="breadcrumb">
+          <a href="index.html">Ana Sayfa</a><span>/</span>Menü
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FİLTRE + ÜRÜNLER ================= -->
+    <section class="section">
+      <div class="container">
+
+        <div class="filter-bar" id="filterBar" role="group" aria-label="Menü kategorileri">
+          <button class="filter-btn is-active" type="button" data-filter="tumu" aria-pressed="true">
+            Tümü <span class="count"></span>
+          </button>
+          <button class="filter-btn" type="button" data-filter="kahve" aria-pressed="false">
+            Kahveler <span class="count"></span>
+          </button>
+          <button class="filter-btn" type="button" data-filter="waffle" aria-pressed="false">
+            Waffle <span class="count"></span>
+          </button>
+          <button class="filter-btn" type="button" data-filter="soguk" aria-pressed="false">
+            Soğuk İçecekler <span class="count"></span>
+          </button>
+          <button class="filter-btn" type="button" data-filter="tatli" aria-pressed="false">
+            Tatlılar &amp; Fırın <span class="count"></span>
+          </button>
+        </div>
+
+        <p id="filterResult" style="text-align:center; color: var(--muted); font-size:0.9rem; margin-bottom:2rem;" role="status" aria-live="polite"></p>
+
+        <div class="card-grid menu-grid" id="menuGrid">
+
+          <!-- ---------- KAHVELER ---------- -->
+          <article class="product-card" data-category="kahve">
+            <div class="product-card__media">
+              <span class="product-card__tag">Klasik</span>
+              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Espresso fincanı" loading="lazy" />
+              <div class="product-card__overlay"><span>Tek shot 7g, çift shot 14g çekirdek</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Espresso</h3><span class="price">₺75</span></div>
+              <p>La'mondes House Blend ile hazırlanan, çikolata ve fındık notalı yoğun bir shot.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.9</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="kahve">
+            <div class="product-card__media">
+              <span class="product-card__tag">En Çok Satan</span>
+              <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Latte art yapılmış flat white" loading="lazy" />
+              <div class="product-card__overlay"><span>150 ml, ipeksi süt köpüğü ile</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Flat White</h3><span class="price">₺125</span></div>
+              <p>Çift shot ristretto üzerine mikroköpüklü süt. Kahve tadını en net veren tercihimiz.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.9</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="kahve">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Cappuccino fincanı" loading="lazy" />
+              <div class="product-card__overlay"><span>Tarçın veya kakao ile servis</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Cappuccino</h3><span class="price">₺120</span></div>
+              <p>Eşit oranda espresso, sıcak süt ve köpük. Sabah kahvaltısının klasik eşlikçisi.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.8</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="kahve">
+            <div class="product-card__media">
+              <span class="product-card__tag product-card__tag--new">Şefin Seçimi</span>
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Filtre kahve ve kahve çekirdekleri" loading="lazy" />
+              <div class="product-card__overlay"><span>V60 · Chemex · Aeropress seçenekli</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>V60 Filtre Kahve</h3><span class="price">₺135</span></div>
+              <p>Etiyopya Yirgacheffe: narenciye, bergamot ve çiçeksi notalar. Elde demleme, 3 dakika.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>5.0</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="kahve">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Sütlü kahve fincanı" loading="lazy" />
+              <div class="product-card__overlay"><span>Ev yapımı karamel sosumuzla</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Karamel Latte</h3><span class="price">₺145</span></div>
+              <p>Tuzlu karamel sosu, çift shot espresso ve buharlanmış süt. Üzeri karamel gezdirilir.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★☆ <small>4.7</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="kahve">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Mocha kahve" loading="lazy" />
+              <div class="product-card__overlay"><span>%70 Belçika bitter çikolatası</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Café Mocha</h3><span class="price">₺150</span></div>
+              <p>Espresso, sıcak çikolata ve süt üçlüsü. Üzerinde krem şanti ve kakao tozu ile.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★☆ <small>4.6</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------- WAFFLE ---------- -->
+          <article class="product-card" data-category="waffle">
+            <div class="product-card__media">
+              <span class="product-card__tag">En Çok Satan</span>
+              <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Çilekli çikolatalı Belçika waffle" loading="lazy" />
+              <div class="product-card__overlay"><span>Sipariş üzerine 6 dakikada pişer</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Klasik Belçika</h3><span class="price">₺185</span></div>
+              <p>Bitter çikolata, çilek, muz ve vanilyalı dondurma. En çok tercih edilen waffle'ımız.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.9</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="waffle">
+            <div class="product-card__media">
+              <span class="product-card__tag product-card__tag--new">Yeni</span>
+              <img src="https://images.unsplash.com/photo-1598233847491-f16487adee2f?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Fıstıklı beyaz çikolatalı waffle" loading="lazy" />
+              <div class="product-card__overlay"><span>Antep fıstığı doğrudan Gaziantep'ten</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Fıstık Rüyası</h3><span class="price">₺215</span></div>
+              <p>Beyaz çikolata sosu, bol Antep fıstığı, kaymak ve tereyağlı karamel.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.8</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="waffle">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Orman meyveli waffle" loading="lazy" />
+              <div class="product-card__overlay"><span>Reçelleri kendimiz kaynatıyoruz</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Orman Meyveli</h3><span class="price">₺195</span></div>
+              <p>Böğürtlen, ahududu ve yaban mersini reçeli, labne kreması ve bal peteği.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★☆ <small>4.7</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="waffle">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1504387432042-8aca549e4729?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="İki kişilik büyük waffle tabağı" loading="lazy" />
+              <div class="product-card__overlay"><span>Paylaşmak için ideal, 2 kişilik</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>La'mondes Special</h3><span class="price">₺320</span></div>
+              <p>Çift waffle, 5 çeşit meyve, 3 çeşit sos, 2 top dondurma. İki kişilik dev porsiyon.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.9</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="waffle">
+            <div class="product-card__media">
+              <span class="product-card__tag">Glutensiz</span>
+              <img src="https://images.unsplash.com/photo-1568051243851-f9b136146e97?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Glutensiz waffle porsiyonu" loading="lazy" />
+              <div class="product-card__overlay"><span>Ayrı tezgâhta hazırlanır</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Glutensiz Waffle</h3><span class="price">₺205</span></div>
+              <p>Karabuğday ve pirinç unu karışımı hamur. Çapraz bulaşma riskine karşı ayrı pişirilir.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★☆ <small>4.6</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------- SOĞUK İÇECEKLER ---------- -->
+          <article class="product-card" data-category="soguk">
+            <div class="product-card__media">
+              <span class="product-card__tag">Yaz Favorisi</span>
+              <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Buzlu latte bardağı" loading="lazy" />
+              <div class="product-card__overlay"><span>Kahve buz küpleriyle sulanmaz</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Iced Latte</h3><span class="price">₺140</span></div>
+              <p>Çift shot espresso, soğuk süt ve kahveden dondurduğumuz buz küpleri.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.8</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="soguk">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Cold brew kahve" loading="lazy" />
+              <div class="product-card__overlay"><span>18 saat soğuk demleme</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Cold Brew</h3><span class="price">₺155</span></div>
+              <p>18 saat soğuk suda demlenmiş Kolombiya çekirdeği. Düşük asit, yüksek kafein.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.9</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="soguk">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Ev yapımı limonata" loading="lazy" />
+              <div class="product-card__overlay"><span>Günlük sıkılır, şurup kullanılmaz</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Nane Limonata</h3><span class="price">₺110</span></div>
+              <p>Taze sıkılmış limon, nane yaprakları ve bir tutam bal. Hazır şurup kullanmıyoruz.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.8</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="soguk">
+            <div class="product-card__media">
+              <span class="product-card__tag product-card__tag--new">Yeni</span>
+              <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Çikolatalı milkshake" loading="lazy" />
+              <div class="product-card__overlay"><span>Gerçek dondurmadan yapılır</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Çikolatalı Milkshake</h3><span class="price">₺165</span></div>
+              <p>Ev yapımı vanilyalı dondurma, Belçika çikolatası ve tam yağlı süt.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★☆ <small>4.7</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ---------- TATLILAR & FIRIN ---------- -->
+          <article class="product-card" data-category="tatli">
+            <div class="product-card__media">
+              <span class="product-card__tag">Günlük Üretim</span>
+              <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="San Sebastian cheesecake dilimi" loading="lazy" />
+              <div class="product-card__overlay"><span>Her gün sınırlı sayıda üretilir</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>San Sebastian</h3><span class="price">₺160</span></div>
+              <p>Üstü yanık, içi akışkan Bask usulü cheesecake. Öğleden sonra genelde tükeniyor.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.9</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="tatli">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Tereyağlı kruvasan" loading="lazy" />
+              <div class="product-card__overlay"><span>Sabah 07:30'da fırından çıkar</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Tereyağlı Kruvasan</h3><span class="price">₺85</span></div>
+              <p>72 saatlik katlama süreci, %100 Fransız tereyağı. Sade, çikolatalı veya peynirli.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.9</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="tatli">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Çikolatalı pasta dilimi" loading="lazy" />
+              <div class="product-card__overlay"><span>Doğum günü için bütün sipariş verilebilir</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Islak Brownie</h3><span class="price">₺140</span></div>
+              <p>Yoğun kakao, ceviz parçacıkları ve sıcak servis edilen çikolata sosu.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★☆ <small>4.7</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="tatli">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Ekşi mayalı ekmek" loading="lazy" />
+              <div class="product-card__overlay"><span>36 saat mayalanır, taş fırında pişer</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Ekşi Mayalı Ekmek</h3><span class="price">₺95</span></div>
+              <p>Tam buğday ve çavdar karışımı, 36 saat fermente edilmiş somun. Eve paket satılır.</p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.8</small></span>
+                <a class="link-arrow" href="iletisim.html">Sipariş İçin →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="empty-state" id="menuEmpty" style="display:none;">
+          <span>🔍</span>
+          <p>Bu kategoride şu an ürün bulunmuyor. Lütfen başka bir kategori seçin.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= BİLGİ NOTU ================= -->
+    <section class="section section--tight section--paper">
+      <div class="container">
+        <div class="features">
+          <div class="feature reveal">
+            <div class="feature__icon">🌾</div>
+            <h3>Alerjen Bilgisi</h3>
+            <p>Gluten, süt ve kuruyemiş içeren ürünlerimiz menüde işaretlidir. Ekibimize sorabilirsiniz.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">🥛</div>
+            <h3>Bitkisel Süt Seçeneği</h3>
+            <p>Badem, yulaf ve soya sütü ile tüm kahveler +25 ₺ fark ile hazırlanabilir.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">📦</div>
+            <h3>Paket Servis</h3>
+            <p>Tüm ürünlerimiz paket olarak alınabilir. Telefonla ön sipariş verebilirsiniz.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">🎂</div>
+            <h3>Özel Sipariş</h3>
+            <p>Doğum günü pastaları ve toplu ikram siparişleri için 3 gün önceden haber verin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Beğendiğiniz bir şey oldu mu?</h2>
+          <p>
+            Masanızı önceden ayırtın, siz gelene kadar kahveniz taze çekilmiş olsun.
+            Perşembe akşamları Quiz Night nedeniyle yerlerimiz hızlı doluyor.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="iletisim.html">Rezervasyon Yap</a>
+            <a class="btn btn--light" href="quiz.html">Quiz Night'a Katıl</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__about">
+          <a href="index.html" class="brand">
+            <span class="brand__mark">L</span>
+            <span class="brand__text">
+              <span class="brand__name">La'mondes</span>
+              <span class="brand__sub">Cafe &amp; Bakery</span>
+            </span>
+          </a>
+          <p>
+            2016'dan beri Kadıköy Moda'da; kendi kavurduğumuz kahveler,
+            her sabah taze fırınlanan hamur işleri ve unutulmaz Perşembe
+            geceleriyle buradayız.
+          </p>
+          <div class="socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)">X</a>
+            <a href="https://wa.me/902165550142" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Sayfalar</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="quiz.html">Quiz Night</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Menümüz</h3>
+          <ul class="footer__links">
+            <li><a href="menu.html#kahve">Kahveler</a></li>
+            <li><a href="menu.html#waffle">Waffle Çeşitleri</a></li>
+            <li><a href="menu.html#soguk">Soğuk İçecekler</a></li>
+            <li><a href="menu.html#tatli">Tatlılar &amp; Fırın</a></li>
+            <li><a href="menu.html">Tüm Ürünler</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">İletişim</h3>
+          <ul class="footer__contact">
+            <li><span>📍</span><span>Caferağa Mah. Moda Cad. No:114/A<br />Kadıköy / İstanbul</span></li>
+            <li><span>📞</span><a href="tel:+902165550142">+90 216 555 01 42</a></li>
+            <li><span>✉️</span><a href="mailto:merhaba@lamondes.com">merhaba@lamondes.com</a></li>
+            <li><span>🕘</span><span>Hafta içi 08:00 – 23:00<br />Hafta sonu 09:00 – 24:00</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> La'mondes Cafe &amp; Bakery. Tüm hakları saklıdır.</span>
+        <nav aria-label="Alt menü">
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a href="galeri.html">Galeri</a>
+          <a href="quiz.html">Quiz Night</a>
+          <a href="iletisim.html">Bize Ulaşın</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Sayfanın başına dön">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La'mondes Cafe &amp; Bakery — Taze Kahve, Belçika Waffle ve Quiz Night</title>
+  <meta name="description" content="La'mondes Cafe & Bakery: her sabah taze çekilen kahveler, el yapımı Belçika waffle'ları, ev yapımı tatlılar ve her Perşembe Quiz Night. Kadıköy'de sıcak bir buluşma noktası." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Ana menü">
+        <a href="index.html" class="brand" aria-label="La'mondes Cafe and Bakery ana sayfa">
+          <span class="brand__mark">L</span>
+          <span class="brand__text">
+            <span class="brand__name">La'mondes</span>
+            <span class="brand__sub">Cafe &amp; Bakery</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" id="navToggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__menu" id="navMenu">
+          <li><a class="nav__link" href="index.html">Ana Sayfa</a></li>
+          <li><a class="nav__link" href="menu.html">Menü</a></li>
+          <li><a class="nav__link" href="quiz.html">Quiz Night</a></li>
+          <li><a class="nav__link" href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a class="nav__link" href="galeri.html">Galeri</a></li>
+          <li><a class="nav__link" href="iletisim.html">İletişim</a></li>
+          <li><a class="btn btn--primary nav__cta" href="iletisim.html">Rezervasyon Yap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <span class="hero__badge">☕ 2016'dan beri Kadıköy'de</span>
+          <h1>Günün en güzel hâli, <em>bir fincan</em> kahveyle başlar.</h1>
+          <p class="hero__text">
+            Kendi kavurmamızdan çekilmiş çekirdekler, her sabah 05:30'da fırından çıkan
+            hamur işleri ve sıcacık bir sohbet. La'mondes; kahveyi bir içecek değil,
+            bir buluşma sebebi olarak görüyor.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="menu.html">Menüyü İncele</a>
+            <a class="btn btn--light" href="iletisim.html">Masa Ayırt</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <strong>9</strong>
+              <span>Yıllık Tecrübe</span>
+            </div>
+            <div class="hero__stat">
+              <strong>24</strong>
+              <span>Kahve Çeşidi</span>
+            </div>
+            <div class="hero__stat">
+              <strong>4.8</strong>
+              <span>Google Puanı</span>
+            </div>
+            <div class="hero__stat">
+              <strong>180+</strong>
+              <span>Quiz Gecesi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ÖZELLİKLER ================= -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="features">
+          <article class="feature reveal">
+            <div class="feature__icon">🌱</div>
+            <h3>Kendi Kavurmamız</h3>
+            <p>Etiyopya, Kolombiya ve Brezilya çekirdeklerini haftalık partiler hâlinde kendi atölyemizde kavuruyoruz.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon">🥐</div>
+            <h3>Her Sabah Taze</h3>
+            <p>Fırınımız 05:30'da yanıyor. Kruvasan, poğaça ve ekşi mayalı ekmeklerimiz günlük üretim.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon">🧇</div>
+            <h3>Gerçek Belçika Waffle</h3>
+            <p>24 saat dinlendirilen hamur, %100 tereyağı ve Belçika çikolatası. Sipariş üzerine pişirilir.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="feature__icon">🎯</div>
+            <h3>Perşembe Quiz Night</h3>
+            <p>Her Perşembe 20:00'de 6 turluk bilgi yarışması, canlı sunum ve ödüller sizi bekliyor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WAFFLE KARTLARI ================= -->
+    <section class="section section--paper">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">İmza Lezzetlerimiz</span>
+          <div class="divider"></div>
+          <h2>Üç Efsane Waffle</h2>
+          <p>
+            Hamurumuzu 24 saat dinlendiriyor, her waffle'ı siz sipariş verdikten sonra
+            döküyoruz. Sıcak gelmesi tesadüf değil.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <!-- 1 -->
+          <article class="product-card reveal">
+            <div class="product-card__media">
+              <span class="product-card__tag">En Çok Satan</span>
+              <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Çilekli ve çikolatalı Belçika waffle" loading="lazy" />
+              <div class="product-card__overlay"><span>Sipariş üzerine sıcak servis edilir ☕</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3>Klasik Belçika</h3>
+                <span class="price">₺185</span>
+              </div>
+              <p>
+                Çift kat Belçika bitter çikolatası, taze çilek, muz dilimleri ve
+                ev yapımı vanilyalı dondurma topu ile.
+              </p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.9 / 312 yorum</small></span>
+                <a class="link-arrow" href="menu.html#waffle">Menüde Gör →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="product-card reveal">
+            <div class="product-card__media">
+              <span class="product-card__tag product-card__tag--new">Yeni</span>
+              <img src="https://images.unsplash.com/photo-1598233847491-f16487adee2f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Fıstıklı beyaz çikolatalı waffle" loading="lazy" />
+              <div class="product-card__overlay"><span>Antep fıstığı Gaziantep'ten geliyor 🌰</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3>Fıstık Rüyası</h3>
+                <span class="price">₺215</span>
+              </div>
+              <p>
+                Beyaz çikolata sosu, bol Antep fıstığı kırığı, kaymak ve
+                üzerine tereyağlı karamel gezdirilmiş hâliyle.
+              </p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★★ <small>4.8 / 154 yorum</small></span>
+                <a class="link-arrow" href="menu.html#waffle">Menüde Gör →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="product-card reveal">
+            <div class="product-card__media">
+              <span class="product-card__tag">Şefin Seçimi</span>
+              <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Meyveli ve fındık soslu waffle tabağı" loading="lazy" />
+              <div class="product-card__overlay"><span>İki kişilik porsiyon seçeneği var 🍓</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top">
+                <h3>Orman Meyveli</h3>
+                <span class="price">₺195</span>
+              </div>
+              <p>
+                Böğürtlen, ahududu ve yaban mersini reçeli, labne kreması ve
+                bal peteği ile hafif bir alternatif.
+              </p>
+              <div class="product-card__foot">
+                <span class="rating">★★★★☆ <small>4.7 / 208 yorum</small></span>
+                <a class="link-arrow" href="menu.html#waffle">Menüde Gör →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="btn-row" style="justify-content: center; margin-top: 2.6rem;">
+          <a class="btn btn--outline" href="menu.html">Tüm Menüyü Gör</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MÜŞTERİ YORUMLARI ================= -->
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Misafirlerimiz Ne Diyor?</span>
+          <div class="divider"></div>
+          <h2>Kaydırın, tanıdık gelecek</h2>
+          <p>Google, Yandex ve Instagram üzerinden gelen yorumlardan bir seçki.</p>
+        </div>
+
+        <div class="slider" id="testimonialSlider">
+          <div class="slider__track" role="region" aria-label="Müşteri yorumları">
+
+            <article class="testimonial">
+              <div class="testimonial__quote">"</div>
+              <p>
+                Kadıköy'de flat white içmek için tek durağım. Barista Emre abi
+                çekirdeği tarif ederken resmen ders anlatıyor. Waffle'ı da tam
+                kıvamında, hiç hamur kalmıyor.
+              </p>
+              <div class="testimonial__person">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Selin Aydın" loading="lazy" />
+                <div>
+                  <strong>Selin Aydın</strong>
+                  <small>Google Yorumu · ★★★★★</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial">
+              <div class="testimonial__quote">"</div>
+              <p>
+                Quiz Night için 8 kişilik ekiple gittik, 3 saat nasıl geçti anlamadık.
+                Sorular ne çok kolay ne de imkânsız. Sunucu enerjisi harika,
+                artık her Perşembe buradayız.
+              </p>
+              <div class="testimonial__person">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Mert Kılıç" loading="lazy" />
+                <div>
+                  <strong>Mert Kılıç</strong>
+                  <small>Instagram · ★★★★★</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial">
+              <div class="testimonial__quote">"</div>
+              <p>
+                Uzaktan çalışıyorum ve sabahları buradayım. Priz bol, wifi hızlı,
+                kimse "bir şey daha alır mısınız" diye rahatsız etmiyor.
+                Ekşi mayalı ekmekli avokado tostu ayrı bir güzel.
+              </p>
+              <div class="testimonial__person">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Zeynep Tarhan" loading="lazy" />
+                <div>
+                  <strong>Zeynep Tarhan</strong>
+                  <small>Google Yorumu · ★★★★★</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial">
+              <div class="testimonial__quote">"</div>
+              <p>
+                Kızımın doğum günü için rezervasyon yaptık, masayı kendileri
+                süslemiş. Pasta siparişimiz de tam istediğimiz gibi çıktı.
+                İlgileri için ayrıca teşekkürler.
+              </p>
+              <div class="testimonial__person">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Elif Doğan" loading="lazy" />
+                <div>
+                  <strong>Elif Doğan</strong>
+                  <small>Yandex Yorumu · ★★★★★</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial">
+              <div class="testimonial__quote">"</div>
+              <p>
+                Filtre kahve severler için: V60 demlemelerini mutlaka deneyin.
+                Etiyopya Yirgacheffe'de o narenciye notasını gerçekten
+                yakalamışlar. Çekirdek de satıyorlar, eve alıyorum.
+              </p>
+              <div class="testimonial__person">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Barış Yalçın" loading="lazy" />
+                <div>
+                  <strong>Barış Yalçın</strong>
+                  <small>Google Yorumu · ★★★★★</small>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial">
+              <div class="testimonial__quote">"</div>
+              <p>
+                Glutensiz waffle seçeneği olması benim için çok kıymetli.
+                Ayrı tezgâhta hazırlıyorlar, bu konuda çok dikkatliler.
+                Tadı da normalinden aşağı kalmıyor.
+              </p>
+              <div class="testimonial__person">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Ayşe Nur Demir" loading="lazy" />
+                <div>
+                  <strong>Ayşe Nur Demir</strong>
+                  <small>Instagram · ★★★★★</small>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="slider__nav">
+            <button class="slider__btn slider__btn--prev" type="button" aria-label="Önceki yorum">‹</button>
+            <div class="slider__dots" aria-hidden="true"></div>
+            <button class="slider__btn slider__btn--next" type="button" aria-label="Sonraki yorum">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUIZ NIGHT TANITIM ================= -->
+    <section class="section quiz-band">
+      <div class="container">
+        <div class="quiz-band__grid">
+          <div class="reveal">
+            <span class="eyebrow">Her Perşembe 20:00</span>
+            <h2>Quiz Night: Kahven yanında biraz da rekabet</h2>
+            <p>
+              6 tur, 60 soru, tek kazanan. Müzikten sinemaya, tarihten genel kültüre
+              uzanan sorularla dolu bir gece. Takımını topla, masanı ayırt,
+              gerisini bize bırak. Katılım ücretsiz, sadece rezervasyon yeterli.
+            </p>
+            <p>
+              Kazanan takıma <strong style="color: var(--gold);">1.500 ₺ değerinde La'mondes hediye çeki</strong>,
+              ikinciye kahve aboneliği, üçüncüye ise ikramlık tatlı tabağı veriyoruz.
+            </p>
+            <div class="btn-row" style="margin-top: 1.6rem;">
+              <a class="btn btn--gold" href="quiz.html">Takımını Kaydet</a>
+              <a class="btn btn--light" href="quiz.html">Detayları Gör</a>
+            </div>
+          </div>
+
+          <div class="quiz-facts reveal">
+            <div class="quiz-fact">
+              <span class="quiz-fact__icon">📅</span>
+              <div>
+                <strong>Her Perşembe</strong>
+                <span>20:00 – 23:00 arası, kapılar 19:30'da açılır</span>
+              </div>
+            </div>
+            <div class="quiz-fact">
+              <span class="quiz-fact__icon">👥</span>
+              <div>
+                <strong>2 – 6 Kişilik Takımlar</strong>
+                <span>Tek geliyorsan seni bir takıma yerleştiriyoruz</span>
+              </div>
+            </div>
+            <div class="quiz-fact">
+              <span class="quiz-fact__icon">🏆</span>
+              <div>
+                <strong>3 Ayrı Ödül</strong>
+                <span>Hediye çeki, kahve aboneliği ve tatlı ikramı</span>
+              </div>
+            </div>
+            <div class="quiz-fact">
+              <span class="quiz-fact__icon">🎟️</span>
+              <div>
+                <strong>Katılım Ücretsiz</strong>
+                <span>Yalnızca önceden kayıt yaptırmanız gerekiyor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALERİ ÖNİZLEME ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Mekândan Kareler</span>
+          <div class="divider"></div>
+          <h2>La'mondes'da bir gün</h2>
+          <p>Sabah fırınından gece quiz masasına kadar kafemizin hâlleri.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="product-card reveal">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="La'mondes kafe iç mekânı" loading="lazy" />
+              <div class="product-card__overlay"><span>Ahşap ve pirinç detaylı iç mekânımız</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Salonumuz</h3></div>
+              <p>48 kişilik oturma alanı, bol prizli çalışma masaları ve arka bahçe.</p>
+              <div class="product-card__foot">
+                <span class="rating">📍 Moda, Kadıköy</span>
+                <a class="link-arrow" href="galeri.html">Galeriye Git →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Baristanın hazırladığı latte art" loading="lazy" />
+              <div class="product-card__overlay"><span>Her fincan elde dökülür</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Bar Tarafı</h3></div>
+              <p>La Marzocco makinemiz ve 3 farklı demleme yöntemi ile filtre kahve barımız.</p>
+              <div class="product-card__foot">
+                <span class="rating">☕ 24 çeşit</span>
+                <a class="link-arrow" href="menu.html#kahve">Kahveleri Gör →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-card__media">
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Fırından yeni çıkmış ekmekler" loading="lazy" />
+              <div class="product-card__overlay"><span>Ekşi maya 36 saat dinlendirilir</span></div>
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__top"><h3>Fırınımız</h3></div>
+              <p>Her sabah 05:30'da başlayan üretim; ekmek, kruvasan ve günlük tatlılar.</p>
+              <div class="product-card__foot">
+                <span class="rating">🥖 Günlük üretim</span>
+                <a class="link-arrow" href="hakkimizda.html">Hikâyemiz →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Masanız hazır olsun mu?</h2>
+          <p>
+            Hafta sonu ve Quiz Night akşamları hızlı doluyoruz. Rezervasyonunuzu
+            önceden yaparsanız istediğiniz köşeyi size ayıralım.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="iletisim.html">Rezervasyon Yap</a>
+            <a class="btn btn--light" href="menu.html">Menüye Göz At</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__about">
+          <a href="index.html" class="brand">
+            <span class="brand__mark">L</span>
+            <span class="brand__text">
+              <span class="brand__name">La'mondes</span>
+              <span class="brand__sub">Cafe &amp; Bakery</span>
+            </span>
+          </a>
+          <p>
+            2016'dan beri Kadıköy Moda'da; kendi kavurduğumuz kahveler,
+            her sabah taze fırınlanan hamur işleri ve unutulmaz Perşembe
+            geceleriyle buradayız.
+          </p>
+          <div class="socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)">X</a>
+            <a href="https://wa.me/902165550142" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Sayfalar</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="quiz.html">Quiz Night</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Menümüz</h3>
+          <ul class="footer__links">
+            <li><a href="menu.html#kahve">Kahveler</a></li>
+            <li><a href="menu.html#waffle">Waffle Çeşitleri</a></li>
+            <li><a href="menu.html#soguk">Soğuk İçecekler</a></li>
+            <li><a href="menu.html#tatli">Tatlılar &amp; Fırın</a></li>
+            <li><a href="menu.html">Tüm Ürünler</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">İletişim</h3>
+          <ul class="footer__contact">
+            <li><span>📍</span><span>Caferağa Mah. Moda Cad. No:114/A<br />Kadıköy / İstanbul</span></li>
+            <li><span>📞</span><a href="tel:+902165550142">+90 216 555 01 42</a></li>
+            <li><span>✉️</span><a href="mailto:merhaba@lamondes.com">merhaba@lamondes.com</a></li>
+            <li><span>🕘</span><span>Hafta içi 08:00 – 23:00<br />Hafta sonu 09:00 – 24:00</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> La'mondes Cafe &amp; Bakery. Tüm hakları saklıdır.</span>
+        <nav aria-label="Alt menü">
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a href="galeri.html">Galeri</a>
+          <a href="quiz.html">Quiz Night</a>
+          <a href="iletisim.html">Bize Ulaşın</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Sayfanın başına dön">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

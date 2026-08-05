@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menü — La'mondes Cafe &amp; Bakery</title>
+<meta name="description" content="La'mondes Cafe & Bakery menüsü: espresso bazlı ve filtre kahveler, Belçika waffle çeşitleri, soğuk içecekler ve günlük fırın ürünleri. Güncel fiyatlarla.">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-sayfa="menu" data-kok="">
+
+<header id="ustBar"></header>
+
+<main>
+
+  <section class="sayfa-bas">
+    <div class="kap">
+      <span class="ust-etiket">Fiyat Listesi</span>
+      <h1>Menümüz</h1>
+      <p>
+        Sıcak ve soğuk içeceklerimiz, waffle çeşitlerimiz ve tatlılarımız.
+        Kategori seçerek süzebilirsiniz.
+      </p>
+      <div class="iz"><a href="index.html">Ana Sayfa</a><span>/</span>Menü</div>
+    </div>
+  </section>
+
+  <section class="blok">
+    <div class="kap">
+      <div class="sekmeler" id="sekmeler" role="group" aria-label="Menü kategorileri"></div>
+      <div id="menuListe"></div>
+    </div>
+  </section>
+
+  <section class="blok-ince yuzey">
+    <div class="kap">
+      <div class="izgara izgara-3">
+        <article class="kart">
+          <span class="kart-im">🧇</span>
+          <h3>Waffle sipariş üzerine</h3>
+          <p>Waffle'ları sipariş verdikten sonra hazırlıyoruz; sıcak gelmesi bu yüzden.</p>
+        </article>
+        <article class="kart">
+          <span class="kart-im">🌾</span>
+          <h3>Alerjen bilgisi</h3>
+          <p>İçerikle ilgili aklınıza takılan bir şey olursa çekinmeden sorun, anlatalım.</p>
+        </article>
+        <article class="kart">
+          <span class="kart-im">📞</span>
+          <h3>Ön sipariş</h3>
+          <p>Yoğun saatlerde beklememek için telefonla veya Instagram'dan yazabilirsiniz.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- QR kodlar -->
+  <section class="blok" id="qrBolumu">
+    <div class="kap">
+      <div class="blok-basi">
+        <span class="ust-etiket">Karekod</span>
+        <h2>Telefonunuzla okutun</h2>
+        <p>Menümüze ve sitemize hızlıca ulaşmak için kamerayı doğrultmanız yeterli.</p>
+      </div>
+
+      <div class="qr-izgara">
+        <article class="qr-kart">
+          <div class="qr-resim" id="qrMenu"></div>
+          <h3>Menü</h3>
+          <p>Güncel ürünler ve fiyatlar</p>
+          <span class="qr-adres" data-qr-adres="qrMenu"></span>
+        </article>
+
+        <article class="qr-kart">
+          <div class="qr-resim" id="qrSite"></div>
+          <h3>Web Sitemiz</h3>
+          <p>Ana sayfa, galeri ve iletişim</p>
+          <span class="qr-adres" data-qr-adres="qrSite"></span>
+        </article>
+      </div>
+
+      <p style="text-align:center;color:var(--muted);font-size:.86rem;margin-top:1.5rem">
+        Masaya koymak için: bu sayfada <strong>Ctrl+P</strong> ile yalnızca karekodlar yazdırılır.
+      </p>
+    </div>
+  </section>
+
+  <section class="blok-ince">
+    <div class="kap">
+      <div class="kart" style="text-align:center;padding:clamp(2rem,5vw,3rem)">
+        <h2>Beğendiğiniz bir şey oldu mu?</h2>
+        <p style="max-width:520px;margin:0 auto 1.5rem">
+          Her gün 11:00 – 00:00 arası Ayık Sokak'tayız. Kalabalık geliyorsanız
+          önceden haber verin, yerinizi ayıralım.
+        </p>
+        <div class="btn-sira" style="justify-content:center">
+          <a class="btn btn-ana" href="iletisim.html">Bize Ulaşın</a>
+          <a class="btn btn-cizgi" href="galeri.html">Galeriye Bak</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Ürün fotoğrafı büyütme penceresi -->
+<div class="kutu" id="buyutec" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Ürün fotoğrafı">
+  <button class="kutu-dugme kutu-kapat" type="button" aria-label="Kapat">✕</button>
+  <button class="kutu-dugme kutu-onceki" type="button" aria-label="Önceki ürün">‹</button>
+  <button class="kutu-dugme kutu-sonraki" type="button" aria-label="Sonraki ürün">›</button>
+  <figure>
+    <img class="kutu-resim" src="" alt="">
+    <figcaption class="kutu-yazi"></figcaption>
+  </figure>
+  <div class="kutu-sayac"></div>
+</div>
+
+<footer id="altBilgi"></footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/supa.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

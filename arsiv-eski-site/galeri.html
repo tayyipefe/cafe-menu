@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri — La'mondes Cafe &amp; Bakery</title>
+  <meta name="description" content="La'mondes Cafe & Bakery galerisi: mekânımızdan, mutfağımızdan, kahvelerimizden ve Quiz Night gecelerinden kareler. Fotoğrafa tıklayarak büyütebilirsiniz." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Ana menü">
+        <a href="index.html" class="brand" aria-label="La'mondes Cafe and Bakery ana sayfa">
+          <span class="brand__mark">L</span>
+          <span class="brand__text">
+            <span class="brand__name">La'mondes</span>
+            <span class="brand__sub">Cafe &amp; Bakery</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" id="navToggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__menu" id="navMenu">
+          <li><a class="nav__link" href="index.html">Ana Sayfa</a></li>
+          <li><a class="nav__link" href="menu.html">Menü</a></li>
+          <li><a class="nav__link" href="quiz.html">Quiz Night</a></li>
+          <li><a class="nav__link" href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a class="nav__link" href="galeri.html">Galeri</a></li>
+          <li><a class="nav__link" href="iletisim.html">İletişim</a></li>
+          <li><a class="btn btn--primary nav__cta" href="iletisim.html">Rezervasyon Yap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= SAYFA BAŞLIĞI ================= -->
+    <section class="page-hero hero--gallery">
+      <div class="container">
+        <span class="eyebrow">Fotoğraflarla</span>
+        <h1>Galeri</h1>
+        <p>
+          Sabah fırınından gece quiz masasına kadar La'mondes'un hâlleri.
+          Büyütmek için herhangi bir fotoğrafa tıklayın — ok tuşlarıyla gezinebilirsiniz.
+        </p>
+        <div class="breadcrumb">
+          <a href="index.html">Ana Sayfa</a><span>/</span>Galeri
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= IZGARA ================= -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-head reveal">
+          <span class="eyebrow">12 Kare</span>
+          <div class="divider"></div>
+          <h2>Mekânımızdan seçmeler</h2>
+          <p>Tüm fotoğraflar kafemizde çekilmiştir. Tıklayın, tam ekran açılsın.</p>
+        </div>
+
+        <div class="gallery-grid">
+
+          <button class="gallery-item gallery-item--wide gallery-item--tall" type="button"
+            data-full="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+            data-title="Ana Salonumuz"
+            data-meta="48 kişilik oturma alanı · Moda, Kadıköy">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="La'mondes kafenin ahşap ağırlıklı ana salonu" loading="lazy" />
+            <span class="gallery-item__caption">
+              <strong>Ana Salonumuz</strong>
+              <span>Mekân</span>
+            </span>
+          </button>
+
+          <button class="gallery-item" type="button"
+            data-full="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+            data-title="Latte Art"
+            data-meta="Baristamız Deniz'in imzası">
+            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Fincanda latte art deseni" loading="lazy" />
+            <span class="gallery-item__caption">
+              <strong>Latte Art</strong>
+              <span>Kahve</span>
+            </span>
+          </button>
+
+          <button class="gallery-item" type="button"
+            data-full="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+            data-title="Klasik Belçika Waffle"
+            data-meta="En çok satan tatlımız · ₺185">
+            <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Çilekli ve çikolatalı Belçika waffle" loading="lazy" />
+            <span class="gallery-item__caption">
+              <strong>Klasik Belçika</strong>
+              <span>Waffle</span>
+            </span>
+          </button>
+
+          <button class="gallery-item gallery-item--wide" type="button"
+            data-full="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+            data-title="Sabah Fırını"
+            data-meta="Her gün 05:30'da başlayan üretim">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Fırından yeni çıkmış ekşi mayalı ekmekler" loading="lazy" />
+            <span class="gallery-item__caption">
+              <strong>Sabah Fırını</strong>
+              <span>Mutfak</span>
+            </span>
+          </button>
+
+          <button class="gallery-item" type="button"
+            data-full="https://images.unsplash.com/photo-1524350876685-274059332603?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+            data-title="Kavurma Atölyesi"
+            data-meta="Haftalık küçük parti kavurma">
+            <img src="https://images.unsplash.com/photo-1524350876685-274059332603?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Taze kavrulmuş kahve çekirdekleri" loading="lazy" />
+            <span class="gallery-item__caption">
+              <strong>Kavurma Atölyesi</strong>
+              <span>Kahve</span>
+            </span>
+          </button>
+
+          <button class="gallery-item" type="button"
+            data-full="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+            data-title="Quiz Night"
+            data-meta="Her Perşembe 20:00 · 6 tur, 60 soru">
+            <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Quiz gecesinde dolu masalar" loading="lazy" />
+            <span class="gallery-item__caption">
+              <strong>Quiz Night</strong>
+              <span>Etkinlik</span>
+            </span>
+          </button>
+
+          <button class="gallery-item gallery-item--tall" type="button"
+            data-full="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+            data-title="Tereyağlı Kruvasan"
+            data-meta="72 saatlik katlama süreci">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Tereyağlı kruvasan tabağı" loading="lazy" />
+            <span class="gallery-item__caption">
+              <strong>Tereyağlı Kruvasan</strong>
+              <span>Fırın</span>
+            </span>
+          </button>
+
+          <button class="gallery-item" type="button"
+            data-full="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+            data-title="Iced Latte"
+            data-meta="Kahveden dondurulmuş buz küpleriyle">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Buzlu latte bardağı" loading="lazy" />
+            <span class="gallery-item__caption">
+              <strong>Iced Latte</strong>
+              <span>Soğuk İçecek</span>
+            </span>
+          </button>
+
+          <button class="gallery-item" type="button"
+            data-full="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+            data-title="Pencere Kenarı"
+            data-meta="Çalışmak için en sevilen köşe">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Pencere kenarındaki oturma köşesi" loading="lazy" />
+            <span class="gallery-item__caption">
+              <strong>Pencere Kenarı</strong>
+              <span>Mekân</span>
+            </span>
+          </button>
+
+          <button class="gallery-item gallery-item--wide" type="button"
+            data-full="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+            data-title="San Sebastian Cheesecake"
+            data-meta="Günlük sınırlı üretim · ₺160">
+            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="San Sebastian cheesecake dilimi" loading="lazy" />
+            <span class="gallery-item__caption">
+              <strong>San Sebastian</strong>
+              <span>Tatlı</span>
+            </span>
+          </button>
+
+          <button class="gallery-item" type="button"
+            data-full="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+            data-title="Filtre Kahve Barı"
+            data-meta="V60 · Chemex · Aeropress">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Filtre kahve ve kahve çekirdekleri" loading="lazy" />
+            <span class="gallery-item__caption">
+              <strong>Filtre Kahve Barı</strong>
+              <span>Kahve</span>
+            </span>
+          </button>
+
+          <button class="gallery-item" type="button"
+            data-full="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+            data-title="Vitrinimiz"
+            data-meta="Günlük hamur işleri ve tatlılar">
+            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Hamur işi ve tatlı vitrini" loading="lazy" />
+            <span class="gallery-item__caption">
+              <strong>Vitrinimiz</strong>
+              <span>Fırın</span>
+            </span>
+          </button>
+
+        </div>
+
+        <p style="text-align:center; color: var(--muted); font-size: 0.9rem; margin-top: 2rem;">
+          İpucu: Lightbox açıkken <strong>← →</strong> tuşlarıyla gezinebilir,
+          <strong>ESC</strong> ile kapatabilirsiniz.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Fotoğraflar yetmez, gelin görün</h2>
+          <p>
+            Mekânımızı en iyi anlatan şey kahve kokusu — o da fotoğrafa girmiyor.
+            Masanızı ayırtın, sizi bekleyelim.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="iletisim.html">Rezervasyon Yap</a>
+            <a class="btn btn--light" href="menu.html">Menüyü İncele</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= LIGHTBOX ================= -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Fotoğraf görüntüleyici">
+    <button class="lightbox__btn lightbox__btn--close" type="button" aria-label="Kapat">✕</button>
+    <button class="lightbox__btn lightbox__btn--prev" type="button" aria-label="Önceki fotoğraf">‹</button>
+    <button class="lightbox__btn lightbox__btn--next" type="button" aria-label="Sonraki fotoğraf">›</button>
+
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" src="" alt="" />
+      <figcaption class="lightbox__caption">
+        <strong id="lightboxTitle"></strong>
+        <span id="lightboxMeta"></span>
+      </figcaption>
+    </figure>
+
+    <div class="lightbox__counter" id="lightboxCounter">1 / 12</div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__about">
+          <a href="index.html" class="brand">
+            <span class="brand__mark">L</span>
+            <span class="brand__text">
+              <span class="brand__name">La'mondes</span>
+              <span class="brand__sub">Cafe &amp; Bakery</span>
+            </span>
+          </a>
+          <p>
+            2016'dan beri Kadıköy Moda'da; kendi kavurduğumuz kahveler,
+            her sabah taze fırınlanan hamur işleri ve unutulmaz Perşembe
+            geceleriyle buradayız.
+          </p>
+          <div class="socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)">X</a>
+            <a href="https://wa.me/902165550142" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Sayfalar</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="quiz.html">Quiz Night</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Menümüz</h3>
+          <ul class="footer__links">
+            <li><a href="menu.html#kahve">Kahveler</a></li>
+            <li><a href="menu.html#waffle">Waffle Çeşitleri</a></li>
+            <li><a href="menu.html#soguk">Soğuk İçecekler</a></li>
+            <li><a href="menu.html#tatli">Tatlılar &amp; Fırın</a></li>
+            <li><a href="menu.html">Tüm Ürünler</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">İletişim</h3>
+          <ul class="footer__contact">
+            <li><span>📍</span><span>Caferağa Mah. Moda Cad. No:114/A<br />Kadıköy / İstanbul</span></li>
+            <li><span>📞</span><a href="tel:+902165550142">+90 216 555 01 42</a></li>
+            <li><span>✉️</span><a href="mailto:merhaba@lamondes.com">merhaba@lamondes.com</a></li>
+            <li><span>🕘</span><span>Hafta içi 08:00 – 23:00<br />Hafta sonu 09:00 – 24:00</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> La'mondes Cafe &amp; Bakery. Tüm hakları saklıdır.</span>
+        <nav aria-label="Alt menü">
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a href="galeri.html">Galeri</a>
+          <a href="quiz.html">Quiz Night</a>
+          <a href="iletisim.html">Bize Ulaşın</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Sayfanın başına dön">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

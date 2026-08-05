@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz Night — La'mondes Cafe &amp; Bakery</title>
+<meta name="description" content="La'mondes Quiz Night: katılım ücretsiz, saat 20:30'da başlıyor. Kolay testi bilene Bardak Waffle, zor testi bilene Waffle Kampanya hediye. Yaklaşan tema ve geçmiş gecelerden videolar.">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-sayfa="quiz" data-kok="">
+
+<header id="ustBar"></header>
+
+<main>
+
+  <!-- Başlık + kurallar tek satırda (yer kaplamasın, etkinlik yukarıda kalsın) -->
+  <section class="sayfa-bas">
+    <div class="kap">
+      <span class="ust-etiket">Etkinlik</span>
+      <h1>Quiz Night</h1>
+      <p>Her hafta bir film, bir tema. Doğru bilene waffle bizden.</p>
+
+      <div class="rozet-serit">
+        <span>🎟️ Katılım ücretsiz</span>
+        <span>🕘 20:30'da başlar</span>
+        <span>🥤 Kolay test → Bardak Waffle</span>
+        <span>🧇 Zor test → Waffle Kampanya</span>
+      </div>
+
+      <div class="iz"><a href="index.html">Ana Sayfa</a><span>/</span>Quiz Night</div>
+    </div>
+  </section>
+
+  <!-- Yaklaşan etkinlik — başlık bloğu yok, doğrudan kart -->
+  <section class="blok">
+    <div class="kap">
+      <div id="etkinlikAlani"></div>
+    </div>
+  </section>
+
+  <!-- Geçmiş etkinlikler (yoksa JS ile gizlenir) -->
+  <section class="blok yuzey">
+    <div class="kap">
+      <div class="blok-basi">
+        <span class="ust-etiket">Arşiv</span>
+        <h2>Geçmiş Quiz Night'lardan</h2>
+      </div>
+      <div id="gecmisAlani"></div>
+    </div>
+  </section>
+
+  <!-- Yer ayırtma -->
+  <section class="blok-ince">
+    <div class="kap">
+      <div class="kart" style="text-align:center;padding:clamp(2rem,5vw,3rem)">
+        <h2>Yer ayırtmak için yazın</h2>
+        <p style="max-width:540px;margin:0 auto 1.5rem">
+          Kapasitemiz sınırlı, önceden haber vermenizi rica ediyoruz.
+          En hızlı dönüş telefon ve WhatsApp üzerinden olur.
+        </p>
+        <div class="btn-sira" style="justify-content:center">
+          <a class="btn btn-ana" href="https://wa.me/905424062095" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
+          <a class="btn btn-cizgi" href="iletisim.html">İletişim Formu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="altBilgi"></footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/supa.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

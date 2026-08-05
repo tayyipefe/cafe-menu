@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yönetim Paneli — La'mondes</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+
+<!-- Mobil üst çubuk -->
+<div class="mobil-bas">
+  <span class="marka-ad">La'mondes</span>
+  <button id="yanDugme" type="button" aria-label="Menüyü aç">☰</button>
+</div>
+<div class="yan-perde" id="yanPerde"></div>
+
+<!-- Panel: yetki doğrulanana kadar gizli -->
+<div class="panel" id="panel" style="visibility:hidden">
+
+  <aside class="yan" id="yanMenu">
+    <a class="marka" href="../index.html" title="Siteyi görüntüle">
+      <span class="marka-im">L</span>
+      <span><span class="marka-ad">La'mondes</span><span class="marka-alt">Yönetim</span></span>
+    </a>
+
+    <div class="yan-baslik">Genel</div>
+    <button class="yan-link" type="button" data-bolum="ozet"><span class="im">📊</span> Özet</button>
+
+    <div class="yan-baslik">İçerik</div>
+    <button class="yan-link" type="button" data-bolum="menu"><span class="im">🍽️</span> Menü</button>
+    <button class="yan-link" type="button" data-bolum="galeri"><span class="im">🖼️</span> Galeri</button>
+    <button class="yan-link" type="button" data-bolum="quiz"><span class="im">🎯</span> Quiz Night</button>
+
+    <div class="yan-baslik">İletişim</div>
+    <button class="yan-link" type="button" data-bolum="mesajlar">
+      <span class="im">✉️</span> Mesajlar <span class="sayi" id="mesajRozet" style="display:none"></span>
+    </button>
+
+    <div class="yan-dip">
+      <button class="yan-link" type="button" data-bolum="hesap"><span class="im">⚙️</span> Hesap</button>
+      <div class="kullanici" id="kullaniciBilgi"></div>
+      <button class="yan-link" type="button" id="cikisYap"><span class="im">🚪</span> Çıkış Yap</button>
+    </div>
+  </aside>
+
+  <main class="icerik">
+    <div class="icerik-bas">
+      <div>
+        <h1 id="bolumBaslik">Özet</h1>
+        <p id="bolumAciklama">Sitenizin güncel durumu.</p>
+      </div>
+      <a class="btn btn-cizgi btn-kucuk" href="../index.html" target="_blank" rel="noopener">Siteyi Görüntüle ↗</a>
+    </div>
+
+    <div id="icerikAlani"></div>
+  </main>
+
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalBaslik">
+  <div class="modal-kutu">
+    <div class="modal-bas">
+      <h2 id="modalBaslik">Başlık</h2>
+      <button class="modal-kapat" type="button" data-kapat aria-label="Kapat">✕</button>
+    </div>
+    <div class="modal-govde" id="modalGovde"></div>
+    <div class="modal-dip" id="modalDip"></div>
+  </div>
+</div>
+
+<!-- Bildirimler -->
+<div class="bildirimler" id="bildirimler" aria-live="polite"></div>
+
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/supa.js"></script>
+<script src="../assets/js/admin.js"></script>
+</body>
+</html>

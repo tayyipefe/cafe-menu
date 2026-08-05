@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İletişim &amp; Rezervasyon — La'mondes Cafe &amp; Bakery</title>
+  <meta name="description" content="La'mondes Cafe & Bakery iletişim bilgileri, konum haritası, çalışma saatleri ve online rezervasyon / mesaj formu. Caferağa Mah. Moda Cad. No:114/A Kadıköy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Ana menü">
+        <a href="index.html" class="brand" aria-label="La'mondes Cafe and Bakery ana sayfa">
+          <span class="brand__mark">L</span>
+          <span class="brand__text">
+            <span class="brand__name">La'mondes</span>
+            <span class="brand__sub">Cafe &amp; Bakery</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" id="navToggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__menu" id="navMenu">
+          <li><a class="nav__link" href="index.html">Ana Sayfa</a></li>
+          <li><a class="nav__link" href="menu.html">Menü</a></li>
+          <li><a class="nav__link" href="quiz.html">Quiz Night</a></li>
+          <li><a class="nav__link" href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a class="nav__link" href="galeri.html">Galeri</a></li>
+          <li><a class="nav__link" href="iletisim.html">İletişim</a></li>
+          <li><a class="btn btn--primary nav__cta" href="iletisim.html">Rezervasyon Yap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= SAYFA BAŞLIĞI ================= -->
+    <section class="page-hero hero--contact">
+      <div class="container">
+        <span class="eyebrow">Bize Ulaşın</span>
+        <h1>İletişim &amp; Rezervasyon</h1>
+        <p>
+          Masa ayırtmak, özel gün siparişi vermek veya sadece merhaba demek için
+          formu doldurun. Genellikle aynı gün içinde dönüş yapıyoruz.
+        </p>
+        <div class="breadcrumb">
+          <a href="index.html">Ana Sayfa</a><span>/</span>İletişim
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HARİTA + FORM ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- SOL: Harita ve bilgiler -->
+          <div class="reveal">
+            <div class="map-card">
+              <iframe
+                title="La'mondes Cafe &amp; Bakery konumu — Moda Caddesi, Kadıköy, İstanbul"
+                src="https://maps.google.com/maps?q=Moda%20Caddesi%2C%20Caferağa%2C%20Kadıköy%2C%20İstanbul&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+
+              <div class="contact-info">
+                <div class="contact-info__item">
+                  <div class="contact-info__icon">📍</div>
+                  <div>
+                    <strong>Adres</strong>
+                    <p>Caferağa Mah. Moda Cad. No:114/A<br />34710 Kadıköy / İstanbul</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Moda+Caddesi+Kadıköy+İstanbul" target="_blank" rel="noopener" style="color: var(--caramel); font-weight: 700;">Yol tarifi al →</a>
+                  </div>
+                </div>
+
+                <div class="contact-info__item">
+                  <div class="contact-info__icon">📞</div>
+                  <div>
+                    <strong>Telefon</strong>
+                    <p><a href="tel:+902165550142">+90 216 555 01 42</a></p>
+                    <p><a href="https://wa.me/902165550142" target="_blank" rel="noopener">WhatsApp ile yazın</a></p>
+                  </div>
+                </div>
+
+                <div class="contact-info__item">
+                  <div class="contact-info__icon">✉️</div>
+                  <div>
+                    <strong>E-posta</strong>
+                    <p><a href="mailto:merhaba@lamondes.com">merhaba@lamondes.com</a></p>
+                    <p><a href="mailto:etkinlik@lamondes.com">etkinlik@lamondes.com</a> (Quiz &amp; özel gün)</p>
+                  </div>
+                </div>
+
+                <div class="contact-info__item">
+                  <div class="contact-info__icon">🚇</div>
+                  <div>
+                    <strong>Ulaşım</strong>
+                    <p>Kadıköy Metro / Marmaray'a 8 dakika yürüme mesafesinde. Moda tramvayı "Moda Caddesi" durağı 100 m.</p>
+                  </div>
+                </div>
+
+                <div class="contact-info__item">
+                  <div class="contact-info__icon">🕘</div>
+                  <div>
+                    <strong>Çalışma Saatleri</strong>
+                    <table class="hours-table">
+                      <tbody>
+                        <tr><td>Pazartesi – Cuma</td><td>08:00 – 23:00</td></tr>
+                        <tr><td>Perşembe (Quiz Night)</td><td>08:00 – 24:00</td></tr>
+                        <tr><td>Cumartesi</td><td>09:00 – 24:00</td></tr>
+                        <tr><td>Pazar</td><td>09:00 – 22:00</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SAĞ: İletişim formu -->
+          <div class="reveal">
+            <div class="form-card">
+              <span class="eyebrow">Mesaj Gönderin</span>
+              <h2 style="margin-bottom: 0.4rem;">Size nasıl yardımcı olabiliriz?</h2>
+              <p style="color: var(--muted); font-size: 0.95rem; margin-bottom: 1.8rem;">
+                Rezervasyon, özel gün siparişi, geri bildirim veya iş birliği —
+                hepsi için doğru yerdesiniz.
+              </p>
+
+              <!-- Form: JS preventDefault ile çalışır, sayfa yenilenmez -->
+              <form id="contactForm" novalidate data-ajax-form data-success="contactSuccess" data-code-prefix="MSG">
+                <div class="form-grid">
+
+                  <div class="field field--full">
+                    <label for="cAd">Ad Soyad <span class="req">*</span></label>
+                    <input type="text" id="cAd" name="ad" placeholder="Örn. Mert Kılıç" required autocomplete="name" />
+                    <span class="field__error"></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="cEposta">E-posta <span class="req">*</span></label>
+                    <input type="email" id="cEposta" name="eposta" placeholder="ornek@eposta.com" required autocomplete="email" />
+                    <span class="field__error"></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="cTelefon">Telefon <span class="req">*</span></label>
+                    <input type="tel" id="cTelefon" name="telefon" placeholder="0532 123 45 67" required autocomplete="tel" />
+                    <span class="field__error"></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="cKonu">Konu <span class="req">*</span></label>
+                    <select id="cKonu" name="konu" required>
+                      <option value="">Seçiniz…</option>
+                      <option value="rezervasyon">Masa Rezervasyonu</option>
+                      <option value="quiz">Quiz Night Hakkında</option>
+                      <option value="ozel-gun">Doğum Günü / Özel Gün</option>
+                      <option value="toplu-siparis">Toplu Sipariş &amp; Catering</option>
+                      <option value="geri-bildirim">Görüş ve Öneri</option>
+                      <option value="isbirligi">İş Birliği / Basın</option>
+                    </select>
+                    <span class="field__error"></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="cKisi">Kişi Sayısı</label>
+                    <select id="cKisi" name="kisi">
+                      <option value="">Rezervasyon değilse boş bırakın</option>
+                      <option value="1-2">1 – 2 kişi</option>
+                      <option value="3-4">3 – 4 kişi</option>
+                      <option value="5-8">5 – 8 kişi</option>
+                      <option value="9+">9 kişi ve üzeri</option>
+                    </select>
+                    <span class="field__error"></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="cTarih">Tarih</label>
+                    <input type="date" id="cTarih" name="tarih" />
+                    <span class="field__error"></span>
+                  </div>
+
+                  <div class="field">
+                    <label for="cSaat">Saat</label>
+                    <input type="time" id="cSaat" name="saat" />
+                    <span class="field__error"></span>
+                  </div>
+
+                  <div class="field field--full">
+                    <label for="cMesaj">Mesajınız <span class="req">*</span></label>
+                    <textarea id="cMesaj" name="mesaj" data-minlength="10" placeholder="Bize iletmek istediklerinizi buraya yazın. Rezervasyonlarda tercih ettiğiniz bölümü (bahçe, pencere kenarı vb.) belirtebilirsiniz." required></textarea>
+                    <span class="field__error"></span>
+                  </div>
+
+                  <div class="field field--check field--full">
+                    <input type="checkbox" id="cOnay" name="onay" required />
+                    <label for="cOnay">
+                      <a href="hakkimizda.html">Kişisel verilerin işlenmesi</a> hakkında bilgilendirildim
+                      ve talebimle ilgili benimle iletişime geçilmesini onaylıyorum. <span class="req">*</span>
+                    </label>
+                  </div>
+
+                  <div class="field field--full">
+                    <button class="btn btn--primary btn--block" type="submit">Mesajı Gönder</button>
+                  </div>
+
+                </div>
+                <p class="form-note">
+                  Acele bir talebiniz mi var? Doğrudan
+                  <a href="tel:+902165550142" style="color: var(--caramel); font-weight: 700;">+90 216 555 01 42</a>
+                  numaralı hattımızı arayabilirsiniz.
+                </p>
+              </form>
+
+              <!-- Başarı mesajı: JS ile görünür hâle gelir -->
+              <div class="form-success" id="contactSuccess" aria-live="polite">
+                <div class="form-success__icon">✓</div>
+                <h3>Mesajınız İletildi!</h3>
+                <p>
+                  Teşekkürler <strong data-fill="ad">dostum</strong>! Mesajınız ekibimize ulaştı.
+                  <strong data-fill="eposta">E-posta adresinize</strong> bir kopya gönderdik ve
+                  en geç 24 saat içinde dönüş yapacağız.
+                </p>
+                <div class="form-success__code" data-fill="kod">MSG-XXXXXX</div>
+                <p style="font-size: 0.9rem;">
+                  Bu takip numarasıyla talebinizin durumunu telefonla sorabilirsiniz.
+                  Rezervasyonlarda onay SMS'i ayrıca gönderilir.
+                </p>
+                <div class="btn-row" style="justify-content: center;">
+                  <a class="btn btn--gold" href="menu.html">Menüye Göz At</a>
+                  <button class="btn btn--outline" type="button" data-reset-form>Yeni Mesaj Yaz</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HIZLI BİLGİLER ================= -->
+    <section class="section section--tight section--paper">
+      <div class="container">
+        <div class="features">
+          <div class="feature reveal">
+            <div class="feature__icon">🅿️</div>
+            <h3>Otopark</h3>
+            <p>Moda Cad. No:120'deki anlaşmalı otoparkta ilk 2 saat ücretsiz. Fişinizi kasaya gösterin.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">🐕</div>
+            <h3>Dost Canlısı</h3>
+            <p>Bahçe bölümümüzde patili dostlarınız her zaman misafirimizdir, mama kabımız hazır.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">♿</div>
+            <h3>Erişilebilirlik</h3>
+            <p>Zemin kat girişi rampalı, engelli tuvaleti mevcut. Yardıma ihtiyacınız olursa seslenin.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">📶</div>
+            <h3>Wi-Fi &amp; Priz</h3>
+            <p>Ücretsiz fiber internet, her masada priz. Çalışmak için gelenlerin ilk tercihi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Perşembe akşamı boş musunuz?</h2>
+          <p>
+            Quiz Night için kayıtlar her hafta Pazartesi açılıyor ve genelde
+            Çarşamba günü doluyor. Takımınızı şimdiden yazdırın.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--gold" href="quiz.html">Quiz Night'a Kaydol</a>
+            <a class="btn btn--light" href="galeri.html">Galeriye Bak</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__about">
+          <a href="index.html" class="brand">
+            <span class="brand__mark">L</span>
+            <span class="brand__text">
+              <span class="brand__name">La'mondes</span>
+              <span class="brand__sub">Cafe &amp; Bakery</span>
+            </span>
+          </a>
+          <p>
+            2016'dan beri Kadıköy Moda'da; kendi kavurduğumuz kahveler,
+            her sabah taze fırınlanan hamur işleri ve unutulmaz Perşembe
+            geceleriyle buradayız.
+          </p>
+          <div class="socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)">X</a>
+            <a href="https://wa.me/902165550142" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Sayfalar</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="quiz.html">Quiz Night</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Menümüz</h3>
+          <ul class="footer__links">
+            <li><a href="menu.html#kahve">Kahveler</a></li>
+            <li><a href="menu.html#waffle">Waffle Çeşitleri</a></li>
+            <li><a href="menu.html#soguk">Soğuk İçecekler</a></li>
+            <li><a href="menu.html#tatli">Tatlılar &amp; Fırın</a></li>
+            <li><a href="menu.html">Tüm Ürünler</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">İletişim</h3>
+          <ul class="footer__contact">
+            <li><span>📍</span><span>Caferağa Mah. Moda Cad. No:114/A<br />Kadıköy / İstanbul</span></li>
+            <li><span>📞</span><a href="tel:+902165550142">+90 216 555 01 42</a></li>
+            <li><span>✉️</span><a href="mailto:merhaba@lamondes.com">merhaba@lamondes.com</a></li>
+            <li><span>🕘</span><span>Hafta içi 08:00 – 23:00<br />Hafta sonu 09:00 – 24:00</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> La'mondes Cafe &amp; Bakery. Tüm hakları saklıdır.</span>
+        <nav aria-label="Alt menü">
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a href="galeri.html">Galeri</a>
+          <a href="quiz.html">Quiz Night</a>
+          <a href="iletisim.html">Bize Ulaşın</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Sayfanın başına dön">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

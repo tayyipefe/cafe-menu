@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Night — La'mondes Cafe &amp; Bakery</title>
+  <meta name="description" content="Her Perşembe 20:00'de La'mondes Quiz Night. 6 tur, 60 soru, üç ayrı ödül. Katılım ücretsiz — takımınızı online kaydedin." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Ana menü">
+        <a href="index.html" class="brand" aria-label="La'mondes Cafe and Bakery ana sayfa">
+          <span class="brand__mark">L</span>
+          <span class="brand__text">
+            <span class="brand__name">La'mondes</span>
+            <span class="brand__sub">Cafe &amp; Bakery</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" id="navToggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__menu" id="navMenu">
+          <li><a class="nav__link" href="index.html">Ana Sayfa</a></li>
+          <li><a class="nav__link" href="menu.html">Menü</a></li>
+          <li><a class="nav__link" href="quiz.html">Quiz Night</a></li>
+          <li><a class="nav__link" href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a class="nav__link" href="galeri.html">Galeri</a></li>
+          <li><a class="nav__link" href="iletisim.html">İletişim</a></li>
+          <li><a class="btn btn--primary nav__cta" href="iletisim.html">Rezervasyon Yap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= SAYFA BAŞLIĞI ================= -->
+    <section class="page-hero hero--quiz">
+      <div class="container">
+        <span class="eyebrow">Her Perşembe 20:00</span>
+        <h1>La'mondes Quiz Night</h1>
+        <p>
+          6 tur, 60 soru, tek kazanan. Takımını topla, kahveni al, bilgini konuştur.
+          Katılım tamamen ücretsiz — sadece önceden kayıt yaptırman yeterli.
+        </p>
+        <div class="breadcrumb">
+          <a href="index.html">Ana Sayfa</a><span>/</span>Quiz Night
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BİLGİ ŞERİDİ ================= -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="info-strip">
+          <div class="info-strip__item">
+            <span>📅</span>
+            <strong>Her Perşembe</strong>
+            <small>Kapılar 19:30'da açılır</small>
+          </div>
+          <div class="info-strip__item">
+            <span>⏰</span>
+            <strong>20:00 – 23:00</strong>
+            <small>Yaklaşık 3 saat sürer</small>
+          </div>
+          <div class="info-strip__item">
+            <span>👥</span>
+            <strong>2 – 6 Kişi</strong>
+            <small>Takım başına maksimum 6 kişi</small>
+          </div>
+          <div class="info-strip__item">
+            <span>🎟️</span>
+            <strong>Ücretsiz</strong>
+            <small>Kayıt zorunlu, katılım bedava</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ETKİNLİK ANLATIMI ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="split">
+          <div class="split__media reveal">
+            <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Quiz Night akşamı kalabalık kafe ortamı" loading="lazy" />
+            <div class="split__badge">
+              <strong>180+</strong>
+              <span>Quiz Gecesi</span>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <span class="eyebrow">Nasıl İşliyor?</span>
+            <div class="divider"></div>
+            <h2>Kahve, kahkaha ve biraz da rekabet</h2>
+            <p>
+              2019'dan bu yana her Perşembe akşamı salonumuzu bir bilgi yarışması
+              sahnesine çeviriyoruz. Sunucumuz Deniz'in hazırladığı sorular ne
+              çok kolay ne de imkânsız — amaç kimseyi elemek değil, masaları
+              birbirine bağlamak.
+            </p>
+            <p>
+              Her tur farklı bir tema üzerine kurulu: müzik, sinema, genel kültür,
+              görsel bulmaca, "bu ne kokusu?" turu ve final hızlı yanıt turu.
+              Cevap kâğıtları turlar arasında toplanır, puanlar ekrana yansıtılır.
+            </p>
+
+            <ul class="check-list">
+              <li>Takımınızı önceden kaydedin, masanız adınıza ayrılsın.</li>
+              <li>Tek başınıza geliyorsanız sizi bir takıma yerleştiriyoruz.</li>
+              <li>Telefon kullanımı yasak — ama kimse kimseyi ispiyonlamıyor.</li>
+              <li>Quiz boyunca menüden sipariş verebilirsiniz, servis devam eder.</li>
+            </ul>
+
+            <div class="btn-row">
+              <a class="btn btn--primary" href="#kayit">Hemen Kaydol</a>
+              <a class="btn btn--outline" href="galeri.html">Geçmiş Gecelere Bak</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AKIŞ ================= -->
+    <section class="section section--paper">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Gecenin Akışı</span>
+          <div class="divider"></div>
+          <h2>Perşembe akşamı saat saat</h2>
+          <p>Aşağıdaki program her hafta aynı şekilde işler, sürprizler turların içindedir.</p>
+        </div>
+
+        <div class="schedule reveal">
+          <div class="schedule__row">
+            <div class="schedule__time">19:30</div>
+            <div>
+              <h3>Kapılar Açılıyor</h3>
+              <p>Takımlar masalara yerleşir, cevap kâğıtları ve kalemler dağıtılır. Mutfak açık.</p>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <div class="schedule__time">20:00</div>
+            <div>
+              <h3>1. Tur — Genel Kültür</h3>
+              <p>Isınma turu. 10 soru, herkesin en az yarısını bildiği rahat bir başlangıç.</p>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <div class="schedule__time">20:30</div>
+            <div>
+              <h3>2. Tur — Müzik Tanıma</h3>
+              <p>Şarkının ilk 5 saniyesi çalınır. Sanatçı ve şarkı adı ayrı ayrı puanlanır.</p>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <div class="schedule__time">21:00</div>
+            <div>
+              <h3>3. Tur — Görsel Bulmaca</h3>
+              <p>Yakınlaştırılmış film sahneleri, logolar ve şehir siluetleri ekrana yansıtılır.</p>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <div class="schedule__time">21:30</div>
+            <div>
+              <h3>Ara — Mutfak Molası</h3>
+              <p>20 dakikalık ara. Waffle ve ikinci kahve siparişleri için en yoğun dakikalar.</p>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <div class="schedule__time">21:50</div>
+            <div>
+              <h3>4. &amp; 5. Tur — Sinema ve Tat Testi</h3>
+              <p>Replikten filmi bulma turu, ardından gözü kapalı kahve çeşidi tahmin turu.</p>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <div class="schedule__time">22:40</div>
+            <div>
+              <h3>Final Turu — Hızlı Yanıt</h3>
+              <p>Çift puanlı 10 soru. Bu tura kadar geride kalan takımlar başa güreşebilir.</p>
+            </div>
+          </div>
+          <div class="schedule__row">
+            <div class="schedule__time">23:00</div>
+            <div>
+              <h3>Ödül Töreni</h3>
+              <p>Puanlar açıklanır, ödüller sahiplerini bulur, kazanan takım duvarımıza asılır.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ÖDÜLLER ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Ödüller</span>
+          <div class="divider"></div>
+          <h2>Kazananları neler bekliyor?</h2>
+          <p>Her hafta üç takım ödül alıyor — üstelik son sıradaki takıma da bir sürprizimiz var.</p>
+        </div>
+
+        <div class="prize-grid">
+          <div class="prize prize--first reveal">
+            <div class="prize__medal">🥇</div>
+            <h3>Birincilik</h3>
+            <p>1.500 ₺ değerinde La'mondes hediye çeki ve kazanan takım fotoğrafının duvara asılması.</p>
+          </div>
+          <div class="prize reveal">
+            <div class="prize__medal">🥈</div>
+            <h3>İkincilik</h3>
+            <p>1 aylık kahve aboneliği: her gün bir adet filtre kahve veya espresso bazlı içecek.</p>
+          </div>
+          <div class="prize reveal">
+            <div class="prize__medal">🥉</div>
+            <h3>Üçüncülük</h3>
+            <p>Takıma özel tatlı tabağı: San Sebastian, brownie ve kruvasan ikramı.</p>
+          </div>
+          <div class="prize reveal">
+            <div class="prize__medal">🎈</div>
+            <h3>Son Sıra Ödülü</h3>
+            <p>Moral olsun diye: sonraki hafta için 4 kişilik ücretsiz sıcak içecek hakkı.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KURALLAR ================= -->
+    <section class="section section--cream">
+      <div class="container">
+        <div class="split">
+          <div class="reveal">
+            <span class="eyebrow">Katılım Kuralları</span>
+            <div class="divider"></div>
+            <h2>Bilmeniz gereken 6 şey</h2>
+            <ol class="rules-list">
+              <li><strong>Takım büyüklüğü:</strong> En az 2, en fazla 6 kişi. 6 kişiyi aşan gruplar iki takıma bölünür.</li>
+              <li><strong>Kayıt zorunlu:</strong> Salonumuz 12 takım kapasiteli. Kayıtsız gelen takımlara yer garantisi veremiyoruz.</li>
+              <li><strong>Telefon yok:</strong> Turlar sırasında telefon masada ters çevrili durur. Yakalanan takım o turdan puan alamaz.</li>
+              <li><strong>Geç kalma:</strong> 20:15'ten sonra gelen takımlar 1. tur puanını kaybeder, oyuna 2. turdan katılır.</li>
+              <li><strong>İtiraz hakkı:</strong> Her takımın gece boyunca bir kez cevap itirazı yapma hakkı vardır.</li>
+              <li><strong>Yaş sınırı:</strong> 16 yaş altı katılımcılar bir yetişkin eşliğinde katılabilir.</li>
+            </ol>
+          </div>
+
+          <div class="split__media reveal">
+            <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Quiz gecesinde birlikte vakit geçiren arkadaş grubu" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KAYIT FORMU ================= -->
+    <section class="section" id="kayit">
+      <div class="container" style="max-width: 820px;">
+        <div class="section-head reveal">
+          <span class="eyebrow">Takım Kaydı</span>
+          <div class="divider"></div>
+          <h2>Bu Perşembe için yerinizi ayırtın</h2>
+          <p>
+            Formu doldurun, kaydınız anında oluşsun. Etkinlikten bir gün önce
+            size hatırlatma mesajı gönderiyoruz.
+          </p>
+        </div>
+
+        <div class="form-card reveal">
+
+          <!-- Form: JS preventDefault ile çalışır, sayfa yenilenmez -->
+          <form id="quizForm" novalidate data-ajax-form data-success="quizSuccess" data-code-prefix="QUIZ">
+            <div class="form-grid">
+
+              <div class="field">
+                <label for="quizAd">Ad Soyad <span class="req">*</span></label>
+                <input type="text" id="quizAd" name="ad" placeholder="Örn. Selin Aydın" required autocomplete="name" />
+                <span class="field__error"></span>
+              </div>
+
+              <div class="field">
+                <label for="quizTakim">Takım Adı <span class="req">*</span></label>
+                <input type="text" id="quizTakim" name="takim" placeholder="Örn. Kafein Bağımlıları" required />
+                <span class="field__error"></span>
+              </div>
+
+              <div class="field">
+                <label for="quizEposta">E-posta <span class="req">*</span></label>
+                <input type="email" id="quizEposta" name="eposta" placeholder="ornek@eposta.com" required autocomplete="email" />
+                <span class="field__error"></span>
+              </div>
+
+              <div class="field">
+                <label for="quizTelefon">Telefon <span class="req">*</span></label>
+                <input type="tel" id="quizTelefon" name="telefon" placeholder="0532 123 45 67" required autocomplete="tel" />
+                <span class="field__error"></span>
+              </div>
+
+              <div class="field">
+                <label for="quizKisi">Kaç Kişisiniz? <span class="req">*</span></label>
+                <select id="quizKisi" name="kisi" required>
+                  <option value="">Seçiniz…</option>
+                  <option value="1">1 kişi (beni bir takıma yerleştirin)</option>
+                  <option value="2">2 kişi</option>
+                  <option value="3">3 kişi</option>
+                  <option value="4">4 kişi</option>
+                  <option value="5">5 kişi</option>
+                  <option value="6">6 kişi</option>
+                </select>
+                <span class="field__error"></span>
+              </div>
+
+              <div class="field">
+                <label for="quizTarih">Katılmak İstediğiniz Perşembe <span class="req">*</span></label>
+                <input type="date" id="quizTarih" name="tarih" required />
+                <span class="field__error"></span>
+              </div>
+
+              <div class="field field--full">
+                <label for="quizNot">Eklemek İstedikleriniz</label>
+                <textarea id="quizNot" name="not" placeholder="Alerji, doğum günü sürprizi, bebek sandalyesi ihtiyacı gibi notlarınızı buraya yazabilirsiniz."></textarea>
+                <span class="field__error"></span>
+              </div>
+
+              <div class="field field--check field--full">
+                <input type="checkbox" id="quizOnay" name="onay" required />
+                <label for="quizOnay">
+                  Katılım kurallarını okudum, kabul ediyorum. Etkinlik hatırlatmaları için
+                  benimle iletişime geçilmesine izin veriyorum. <span class="req">*</span>
+                </label>
+              </div>
+
+              <div class="field field--full">
+                <button class="btn btn--primary btn--block" type="submit">Takımımı Kaydet</button>
+              </div>
+
+            </div>
+            <p class="form-note">
+              Sorunuz mu var? <a href="iletisim.html" style="color: var(--caramel); font-weight: 700;">Bize ulaşın</a>
+              veya <a href="tel:+902165550142" style="color: var(--caramel); font-weight: 700;">+90 216 555 01 42</a> numaralı hattı arayın.
+            </p>
+          </form>
+
+          <!-- Başarı mesajı: JS ile görünür hâle gelir -->
+          <div class="form-success" id="quizSuccess" aria-live="polite">
+            <div class="form-success__icon">✓</div>
+            <h3>Kaydınız Alındı!</h3>
+            <p>
+              Teşekkürler <strong data-fill="ad">dostum</strong>! Takımınız Quiz Night listesine eklendi.
+              Onay maili <strong data-fill="eposta">e-posta adresinize</strong> gönderildi, etkinlikten bir gün önce
+              hatırlatma mesajı alacaksınız.
+            </p>
+            <div class="form-success__code" data-fill="kod">QUIZ-XXXXXX</div>
+            <p style="font-size: 0.9rem;">
+              Bu kayıt numarasını kapıda göstermeniz yeterli. 19:30'da kapılar açılıyor,
+              masanız adınıza ayrıldı.
+            </p>
+            <div class="btn-row" style="justify-content: center;">
+              <a class="btn btn--gold" href="menu.html">Menüye Göz At</a>
+              <button class="btn btn--outline" type="button" data-reset-form>Yeni Kayıt Oluştur</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SSS ================= -->
+    <section class="section section--paper">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Sık Sorulanlar</span>
+          <div class="divider"></div>
+          <h2>Merak edilenler</h2>
+        </div>
+
+        <div class="value-grid">
+          <div class="value-card reveal">
+            <div class="value-card__num">01</div>
+            <h3>Tek başıma gelebilir miyim?</h3>
+            <p>Tabii ki. Formda "1 kişi" seçeneğini işaretleyin, sizi eksik olan bir takıma yerleştirelim. Genelde gecenin en eğlenceli takımları böyle kuruluyor.</p>
+          </div>
+          <div class="value-card reveal">
+            <div class="value-card__num">02</div>
+            <h3>Katılım ücreti var mı?</h3>
+            <p>Hayır. Quiz'e katılım tamamen ücretsiz. Sadece masanızdan verdiğiniz siparişleri ödüyorsunuz, minimum harcama şartı da yok.</p>
+          </div>
+          <div class="value-card reveal">
+            <div class="value-card__num">03</div>
+            <h3>Sorular çok zor mu?</h3>
+            <p>Zorluk dengeli tutuluyor. Her turda 3 kolay, 4 orta ve 3 zor soru var. Amacımız kimseyi zorlamak değil, masaları sohbete sokmak.</p>
+          </div>
+          <div class="value-card reveal">
+            <div class="value-card__num">04</div>
+            <h3>Kaydımı iptal edebilir miyim?</h3>
+            <p>Etkinlikten 4 saat öncesine kadar telefonla veya e-postayla iptal edebilirsiniz. Böylece bekleme listesindeki takımlara yer açılıyor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__about">
+          <a href="index.html" class="brand">
+            <span class="brand__mark">L</span>
+            <span class="brand__text">
+              <span class="brand__name">La'mondes</span>
+              <span class="brand__sub">Cafe &amp; Bakery</span>
+            </span>
+          </a>
+          <p>
+            2016'dan beri Kadıköy Moda'da; kendi kavurduğumuz kahveler,
+            her sabah taze fırınlanan hamur işleri ve unutulmaz Perşembe
+            geceleriyle buradayız.
+          </p>
+          <div class="socials">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+            <a href="https://x.com" target="_blank" rel="noopener" aria-label="X (Twitter)">X</a>
+            <a href="https://wa.me/902165550142" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Sayfalar</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="quiz.html">Quiz Night</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Menümüz</h3>
+          <ul class="footer__links">
+            <li><a href="menu.html#kahve">Kahveler</a></li>
+            <li><a href="menu.html#waffle">Waffle Çeşitleri</a></li>
+            <li><a href="menu.html#soguk">Soğuk İçecekler</a></li>
+            <li><a href="menu.html#tatli">Tatlılar &amp; Fırın</a></li>
+            <li><a href="menu.html">Tüm Ürünler</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">İletişim</h3>
+          <ul class="footer__contact">
+            <li><span>📍</span><span>Caferağa Mah. Moda Cad. No:114/A<br />Kadıköy / İstanbul</span></li>
+            <li><span>📞</span><a href="tel:+902165550142">+90 216 555 01 42</a></li>
+            <li><span>✉️</span><a href="mailto:merhaba@lamondes.com">merhaba@lamondes.com</a></li>
+            <li><span>🕘</span><span>Hafta içi 08:00 – 23:00<br />Hafta sonu 09:00 – 24:00</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; <span data-year>2026</span> La'mondes Cafe &amp; Bakery. Tüm hakları saklıdır.</span>
+        <nav aria-label="Alt menü">
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a href="galeri.html">Galeri</a>
+          <a href="quiz.html">Quiz Night</a>
+          <a href="iletisim.html">Bize Ulaşın</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Sayfanın başına dön">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

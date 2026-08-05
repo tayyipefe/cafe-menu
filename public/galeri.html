@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galeri — La'mondes Cafe &amp; Bakery</title>
+<meta name="description" content="La'mondes Cafe & Bakery galerisi: mekânımızdan, mutfağımızdan ve Quiz Night gecelerinden fotoğraflar.">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-sayfa="galeri" data-kok="">
+
+<header id="ustBar"></header>
+
+<main>
+
+  <section class="sayfa-bas">
+    <div class="kap">
+      <span class="ust-etiket">Fotoğraflarla</span>
+      <h1>Galeri</h1>
+      <p>
+        Mekânımızdan, lezzetlerimizden ve etkinliklerimizden kareler.
+        Büyütmek için bir fotoğrafa tıklayın.
+      </p>
+      <div class="iz"><a href="index.html">Ana Sayfa</a><span>/</span>Galeri</div>
+    </div>
+  </section>
+
+  <section class="blok">
+    <div class="kap">
+      <div id="galeriIzgara"></div>
+      <p style="text-align:center;color:var(--muted);font-size:.86rem;margin-top:1.8rem">
+        Lightbox açıkken <strong>← →</strong> tuşlarıyla gezinebilir, <strong>ESC</strong> ile kapatabilirsiniz.
+      </p>
+    </div>
+  </section>
+
+  <section class="blok-ince">
+    <div class="kap">
+      <div class="kart" style="text-align:center;padding:clamp(2rem,5vw,3rem)">
+        <h2>Fotoğraflar yetmez, gelin görün</h2>
+        <p style="max-width:520px;margin:0 auto 1.5rem">
+          Her gün 11:00 – 00:00 arası Körfez'de, Ayık Sokak'tayız.
+        </p>
+        <div class="btn-sira" style="justify-content:center">
+          <a class="btn btn-ana" href="iletisim.html">Bize Ulaşın</a>
+          <a class="btn btn-cizgi" href="menu.html">Menüyü İncele</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Lightbox -->
+<div class="kutu" id="buyutec" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Fotoğraf görüntüleyici">
+  <button class="kutu-dugme kutu-kapat" type="button" aria-label="Kapat">✕</button>
+  <button class="kutu-dugme kutu-onceki" type="button" aria-label="Önceki fotoğraf">‹</button>
+  <button class="kutu-dugme kutu-sonraki" type="button" aria-label="Sonraki fotoğraf">›</button>
+  <figure>
+    <img class="kutu-resim" src="" alt="">
+    <figcaption class="kutu-yazi"></figcaption>
+  </figure>
+  <div class="kutu-sayac"></div>
+</div>
+
+<footer id="altBilgi"></footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/supa.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
